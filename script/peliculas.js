@@ -7,7 +7,7 @@ const movies = [
     poster: "imagenes/ligadejusticia.webp",
     rating: 8.2,
     quality: "HD",
-    videoUrl: ""
+    videoUrl: "https://drive.google.com/file/d/1HWc738L7aPLMQ9XKzejn762boIhJmIyv/view?usp=sharing"
   },
   {
     id: 2,
@@ -68,7 +68,8 @@ const movies = [
     year: 2023,
     poster: "imagenes/implacable.jpg",
     rating: 7.0,
-    quality: "Full HD"
+    quality: "Full HD",
+    videoUrl: "https://drive.google.com/file/d/1fl9bf-rrN2Z4Sw1caZv0-iqna67dyXGT/view?usp=sharing"
   },
 
   {
