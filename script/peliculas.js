@@ -220,12 +220,12 @@ const movies = [
   
 ];
 
-// Variables de paginación
+// paginación
 let currentPage = 1;
 const moviesPerPage = 12;
 const totalPages = Math.ceil(movies.length / moviesPerPage);
 
-// Cargar películas en la página
+// Cargar películas 
 document.addEventListener('DOMContentLoaded', function() {
   loadMovies();
   setupPagination();
@@ -315,7 +315,7 @@ function initializeApp() {
   setupSearch();
 }
 
-// Búsqueda de películas
+// Búsqueda 
 function setupSearch() {
   const searchForm = document.getElementById('search-form');
   const searchInput = document.getElementById('search-input');
@@ -338,7 +338,7 @@ function setupSearch() {
 function displaySearchResults(results, query) {
   const mainContent = document.querySelector('main');
   
-  // Crear contenedor de resultados
+  // resultados
   const searchResultsHTML = `
     <section class="search-results">
       <div class="section-header">
@@ -356,3 +356,31 @@ function displaySearchResults(results, query) {
   // Ocultar contenido actual y mostrar resultados
   mainContent.innerHTML = searchResultsHTML;
 }
+
+
+const menuIcon = document.querySelector('.mobile-menu-icon');
+const mobileNav = document.querySelector('.mobile-nav');
+const dropdownToggle = document.querySelector('.dropdown-toggle');
+const dropdownList = document.querySelector('.dropdown-list-mobile');
+
+// Alternar menú móvil completo
+menuIcon.addEventListener('click', () => {
+  mobileNav.classList.toggle('active');
+
+  // Al cerrar el menú completo, ocultar también el submenú
+  if (!mobileNav.classList.contains('active')) {
+    dropdownList.classList.remove('show');
+  }
+});
+
+// Alternar submenú "Categorías"
+dropdownToggle.addEventListener('click', function(e) {
+  e.preventDefault();
+  dropdownList.classList.toggle('show');
+});
+
+
+
+
+
+

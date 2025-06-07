@@ -232,4 +232,39 @@ main {
   color: #FFD700;
 }
 
+/* Responsive */
+@media screen and (max-width: 992px) {
+  .movies-grid {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .movies-grid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 16px;
+  }
+  
+  .movie-info {
+    padding: 12px;
+  }
+  
+  .movie-title {
+    font-size: 0.9rem;
+    height: 42px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .movies-grid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 12px;
+  }
+  
+  .slider-arrow {
+    width: 35px;
+    height: 35px;
+  }
+}
+
 
