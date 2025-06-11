@@ -229,6 +229,7 @@ const totalPages = Math.ceil(movies.length / moviesPerPage);
 document.addEventListener('DOMContentLoaded', function() {
   loadMovies();
   setupPagination();
+  setupMovieClickHandlers();
 });
 
 function loadMovies() {
@@ -269,6 +270,34 @@ function createMovieCard(movie) {
     </a>
   `;
 }
+//nuevo
+function setupMovieClickHandlers() {
+  const movieCards = document.querySelectorAll('.movie-card');
+  
+  movieCards.forEach(card => {
+    card.addEventListener('click', function() {
+      const movieId = this.dataset.id;
+      // Redirigir a la página de detalles con el ID de la película
+      window.location.href = `pelidetalle.html?id=${movieId}`;
+    });
+  });
+}
+
+function updatePaginationUI() {
+  const prevBtn = document.querySelector('.pagination-btn.prev');
+  const nextBtn = document.querySelector('.pagination-btn.next');
+  const currentPageSpan = document.querySelector('.current-page');
+  const totalPagesSpan = document.querySelector('.total-pages');
+  
+  if (prevBtn && nextBtn && currentPageSpan && totalPagesSpan) {
+    prevBtn.disabled = currentPage === 1;
+    nextBtn.disabled = currentPage === totalPages;
+    currentPageSpan.textContent = currentPage;
+    totalPagesSpan.textContent = totalPages;
+  }
+}
+
+//nueva
 
 
 function setupPagination() {

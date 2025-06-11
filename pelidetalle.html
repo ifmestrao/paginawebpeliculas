@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detalles de Película - CineCalidad</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/pelidetalle.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+<body>
+  <header id="main-header">
+    <div class="header-container">
+      <div class="logo-container">
+        <a href="index.html">
+           <img src="Icon/IconWeb.jpg" alt="Logo" id="logo">
+        </a>
+      </div>
+
+      <div class="search-container">
+        <form id="search-form">
+          <input type="text" id="search-input" placeholder="Buscar">
+          <button type="submit" id="search-button">
+            <i class="fas fa-search"></i>
+          </button>
+        </form>
+      </div>
+
+      <nav class="desktop-nav">
+        <ul>
+          <li><a href="index.html" class="active">Inicio</a></li>
+          <li class="dropdown">
+            <a href="#">Categorias</a>
+              <div class="dropdown-content">
+                <a href="#">Destacado</a>
+                <a href="#">Acción</a>
+                <a href="#">Comedia</a>
+                <a href="#">Suspenso</a>
+                <a href="#">Aventura</a>
+                <a href="#">Drama</a>
+                <a href="#">Crimen</a>
+                <a href="#">Romance</a>
+                <a href="#">Terror</a>
+                <a href="#">Ciencia Ficción</a>
+              </div>
+          </li>
+          <li><a href="#" id="telegram-link">Canal</a></li>
+        </ul>
+      </nav>
+
+      <div class="mobile-menu-icon">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+
+    <nav class="mobile-nav">
+    <ul>
+    <li><a href="index.html" class="active">Inicio</a></li>
+    <li class="dropdown-mobile">
+      <a href="#" class="dropdown-toggle">Categorías</a>
+      <ul class="dropdown-list-mobile">
+        <li><a href="#">Destacado</a></li>
+        <li><a href="#">Acción</a></li>
+        <li><a href="#">Comedia</a></li>
+        <li><a href="#">Suspenso</a></li>
+        <li><a href="#">Aventura</a></li>
+        <li><a href="#">Drama</a></li>
+        <li><a href="#">Crimen</a></li>
+        <li><a href="#">Romance</a></li>
+        <li><a href="#">Terror</a></li>
+        <li><a href="#">Ciencia Ficción</a></li>
+      </ul>
+    </li>
+    <li><a href="#" id="telegram-link-mobile">Canal</a></li>
+  </ul>
+  </nav>
+  </header>
+
+  <main class="movie-details-main">
+    <div class="movie-details-container">
+      <div class="movie-poster-section">
+        <img id="movie-poster" src="" alt="Movie Poster" class="movie-poster-large">
+      </div>
+      
+      <div class="movie-info-section">
+        <h1 id="movie-title" class="movie-title-large"></h1>
+        
+        <div class="movie-description">
+          <p id="movie-description"></p>
+        </div>
+        
+        <div class="movie-metadata">
+          <div class="metadata-row">
+            <span class="metadata-label">Títulos:</span>
+            <span id="movie-titles" class="metadata-value"></span>
+          </div>
+          
+          <div class="metadata-row">
+            <span class="metadata-label">IMDb:</span>
+            <div class="rating-container">
+              <div class="stars" id="movie-stars"></div>
+              <span id="movie-rating" class="rating-text"></span>
+            </div>
+          </div>
+          
+          <div class="metadata-row">
+            <span class="metadata-label">Género:</span>
+            <span id="movie-genres" class="metadata-value genres"></span>
+          </div>
+          
+          <div class="metadata-row">
+            <span class="metadata-label">Audio:</span>
+            <span id="movie-audio" class="metadata-value"></span>
+          </div>
+          
+          <div class="metadata-row">
+            <span class="metadata-label">Calidad:</span>
+            <span id="movie-quality" class="metadata-value quality-badge"></span>
+          </div>
+          
+          <div class="metadata-row">
+            <span class="metadata-label">Director:</span>
+            <span id="movie-director" class="metadata-value director"></span>
+          </div>
+          
+          <div class="metadata-row">
+            <span class="metadata-label">Elenco:</span>
+            <span id="movie-cast" class="metadata-value cast"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="action-buttons">
+      <button id="trailer-btn" class="action-btn trailer-btn">
+        <i class="fas fa-play"></i>
+        Ver Trailer
+      </button>
+      
+      <button id="watch-online-btn" class="action-btn watch-btn">
+        <i class="fas fa-tv"></i>
+        VER ONLINE
+      </button>
+      
+      <button id="download-btn" class="action-btn download-btn">
+        <i class="fas fa-download"></i>
+        DESCARGAR
+      </button>
+    </div>
+  </main>
+
+    <!-- Sección de Comentarios -->
+  <section class="comments-section">
+    <div class="comments-container">
+      <div class="comments-header">
+        <h2><i class="fas fa-comments"></i> Comentarios de la Película</h2>
+        <div class="comments-stats">
+          <span id="comments-count">0 comentarios</span>
+        </div>
+      </div>
+
+      <!-- Formulario para agregar comentario -->
+      <div class="add-comment-form">
+        <div class="user-avatar">
+          <i class="fas fa-user-circle"></i>
+        </div>
+        <form id="comment-form" class="comment-form">
+          <div class="form-group">
+            <input type="text" id="user-name" placeholder="Tu nombre" required>
+          </div>
+          <div class="form-group">
+            <div class="rating-input">
+              <label>Tu calificación:</label>
+              <div class="star-rating-input">
+                <i class="far fa-star" data-rating="1"></i>
+                <i class="far fa-star" data-rating="2"></i>
+                <i class="far fa-star" data-rating="3"></i>
+                <i class="far fa-star" data-rating="4"></i>
+                <i class="far fa-star" data-rating="5"></i>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <textarea id="comment-text" placeholder="Escribe tu comentario sobre la película..." rows="4" required></textarea>
+          </div>
+          <button type="submit" class="submit-comment-btn">
+            <i class="fas fa-paper-plane"></i>
+            Publicar Comentario
+          </button>
+        </form>
+      </div>
+
+      <!-- Lista de comentarios -->
+      <div class="comments-list" id="comments-list">
+        <!-- Los comentarios se cargarán aquí dinámicamente -->
+      </div>
+
+      <!-- Mensaje cuando no hay comentarios -->
+      <div class="no-comments" id="no-comments" style="display: none;">
+        <i class="fas fa-comment-slash"></i>
+        <p>Sé el primero en comentar esta película</p>
+      </div>
+    </div>
+  </section>
+
+  <script src="script/peliculas.js"></script>
+  <script src="script/pelidetalle.js"></script>
+  <script src="script/comentarios.js"></script>
+</body>
+</html>
