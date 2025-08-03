@@ -257,23 +257,10 @@ function clearAllComments() {
 }
 
 // Agregar algunos comentarios de ejemplo para demostración
-function addSampleComments() {
+/*function addSampleComments() {
   const sampleComments = [
-    {
-      userName: "María González",
-      text: "Excelente película, muy recomendada. La actuación es increíble y la historia te mantiene enganchado desde el primer minuto.",
-      rating: 5
-    },
-    {
-      userName: "Carlos Rodríguez",
-      text: "Buena película, aunque esperaba un poco más del final. Los efectos visuales están muy bien logrados.",
-      rating: 4
-    },
-    {
-      userName: "Ana López",
-      text: "Me encantó la cinematografía y la banda sonora. Una película que definitivamente vale la pena ver.",
-      rating: 5
-    }
+  
+    
   ];
   
   // Solo agregar comentarios de ejemplo si no hay comentarios para esta película
@@ -297,11 +284,10 @@ function addSampleComments() {
     loadComments();
     updateCommentsCount();
   }
-}
-
+}*//*
 // Llamar a la función de comentarios de ejemplo después de un breve delay
 setTimeout(() => {
   if (currentMovieId) {
     addSampleComments();
   }
-}, 1000);
+}, 1000);*/
