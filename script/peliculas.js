@@ -29,12 +29,12 @@ const movies = [
   },
   {
     id: 4,
-    title: "Exterminio: La evolución (2025)",
-    year: 2023,
-    poster: "imagenes/28 años.jpg",
+    title: "Jurassic World: El Renacer (2025)",
+    year: 2025,
+    poster: "imagenes/jurasic.jpg",
     rating: 7.4,
     quality: "HD",
-    videoUrl: "https://drive.google.com/file/d/1J7agf1qJKspl_xE2nk9BGmpLLrA3C3Pu/view?usp=sharing"
+    videoUrl: ""
   },
   {
     id: 5,

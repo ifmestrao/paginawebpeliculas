@@ -59,9 +59,9 @@ const moviesData = {
   },
   4: {
     id: 4,
-    title: "",
-    year: 2000,
-    poster: "",
+    title: "Jurassic World: El Renacer (2025)",
+    year: 2025,
+    poster: "imagenes/jurasic.jpg",
     rating: 0.0,
     quality: "",
     description: "",
@@ -71,8 +71,8 @@ const moviesData = {
     director: "",
     cast: [""],
     trailerUrl: "",
-    watchUrl: "https://drive.google.com/file/d/1J7agf1qJKspl_xE2nk9BGmpLLrA3C3Pu/view?usp=sharing",
-    downloadUrl: "https://drive.google.com/file/d/1J7agf1qJKspl_xE2nk9BGmpLLrA3C3Pu/view?usp=sharing"
+    watchUrl: "https://drive.google.com/file/d/14VmBzK8uXfwQnwZqnixWFr8L8dU8YbMk/view?usp=sharing",
+    downloadUrl: ""
   },
   5: {
     id: 5,
