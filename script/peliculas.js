@@ -7,7 +7,7 @@ const movies = [
     poster: "imagenes/ligadejusticia.webp",
     rating: 8.2,
     quality: "HD",
-    videoUrl: "https://drive.google.com/file/d/1HWc738L7aPLMQ9XKzejn762boIhJmIyv/view?usp=sharing"
+    videoUrl: ""
   },
   {
     id: 2,
@@ -25,7 +25,7 @@ const movies = [
     poster: "imagenes/melagodon.webp",
     rating: 6.8,
     quality: "Full HD",
-    videoUrl: "https://drive.google.com/file/d/1IRY3czDp_PVPLbuTRIyzs8RnTVNz_r05/view?usp=sharing"
+    videoUrl: ""
   },
   {
     id: 4,
@@ -43,7 +43,7 @@ const movies = [
     poster: "imagenes/indiana jones.webp",
     rating: 5.9,
     quality: "HD",
-    videoUrl: "https://drive.google.com/file/d/1ujEWSEopq-ktSUUnKD_KXlgUIHKuGpV_/view?usp=sharing"
+    videoUrl: ""
   },
   {
     id: 6,
@@ -70,7 +70,7 @@ const movies = [
     poster: "imagenes/implacable.jpg",
     rating: 7.0,
     quality: "Full HD",
-    videoUrl: "https://drive.google.com/file/d/1fl9bf-rrN2Z4Sw1caZv0-iqna67dyXGT/view?usp=sharing"
+    videoUrl: ""
   },
 
   {
@@ -80,7 +80,7 @@ const movies = [
     poster: "imagenes/sinners.jpg",
     rating: 7.0,
     quality: "4K UHD",
-    videoUrl: "https://drive.google.com/file/d/1KSIPHulhd0j8KvJ6uP6d7kjih1mfAMbR/view?usp=sharing"
+    videoUrl: ""
   }
   ,
 

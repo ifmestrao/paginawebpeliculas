@@ -74,23 +74,6 @@ const moviesData = {
     watchUrl: "https://drive.google.com/file/d/14VmBzK8uXfwQnwZqnixWFr8L8dU8YbMk/view?usp=sharing",
     downloadUrl: ""
   },
-  5: {
-    id: 5,
-    title: "",
-    year: 2000,
-    poster: "",
-    rating: 0.0,
-    quality: "",
-    description: "",
-    titles: "",
-    genres: [""],
-    audio: "Latino y Inglés subtitulada",
-    director: "",
-    cast: [""],
-    trailerUrl: "",
-    watchUrl: "",
-    downloadUrl: ""
-  },
   
 };
 
