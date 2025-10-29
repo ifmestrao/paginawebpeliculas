@@ -282,6 +282,7 @@ const categoryMap = {
 
 // Descripciones de categorías
 const categoryDescriptions = {
+  /*
   'accion': 'Películas llenas de adrenalina, peleas espectaculares y emociones fuertes.',
   'comedia': 'Ríete con las mejores películas cómicas y situaciones hilarantes.',
   'suspenso': 'Tensión constante y giros inesperados que te mantendrán al borde del asiento.',
@@ -292,6 +293,7 @@ const categoryDescriptions = {
   'terror': 'Peliculas de miedo que te harán saltar del susto.',
   'ciencia-ficcion': 'Futuros distópicos, tecnología avanzada y viajes espaciales.',
   'destacado': 'Las mejores películas seleccionadas especialmente para ti.'
+  */
 };
 
 document.addEventListener('DOMContentLoaded', function() {
