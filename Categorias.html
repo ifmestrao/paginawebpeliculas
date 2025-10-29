@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CineWolf</title>
+  <title>Categorías - CineWolf</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/header.css">
   <link rel="stylesheet" href="css/pelicula.css">
@@ -13,7 +13,6 @@
 <body>
 
   <header id="main-header">
-    
     <div class="header-container">
       <div class="logo-container">
         <a href="index.html">
@@ -30,12 +29,12 @@
         </form>
       </div>
 
-    <nav class="desktop-nav">
-      <ul>
-        <li><a href="index.html" class="active">Inicio</a></li>
-        <li class="dropdown">
-          <a href="#">Categorias</a>
-          <div class="dropdown-content">
+      <nav class="desktop-nav">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li class="dropdown">
+            <a href="categorias.html" class="active">Categorias</a>
+            <div class="dropdown-content">
               <a href="categorias.html?categoria=destacado">Destacado</a>
               <a href="categorias.html?categoria=accion">Acción</a>
               <a href="categorias.html?categoria=comedia">Comedia</a>
@@ -46,63 +45,48 @@
               <a href="categorias.html?categoria=romance">Romance</a>
               <a href="categorias.html?categoria=terror">Terror</a>
               <a href="categorias.html?categoria=ciencia-ficcion">Ciencia Ficción</a>
-          </div>
+            </div>
+          </li>
+          <li><a href="canal.html" id="telegram-link">Canal</a></li>
+        </ul>
+      </nav>
+
+      <div class="mobile-menu-icon">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+
+    <nav class="mobile-nav">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li class="dropdown-mobile">
+          <a href="categorias.html" class="dropdown-toggle active">Categorías</a>
+          <ul class="dropdown-list-mobile">
+            <li><a href="categorias.html?categoria=destacado">Destacado</a></li>
+            <li><a href="categorias.html?categoria=accion">Acción</a></li>
+            <li><a href="categorias.html?categoria=comedia">Comedia</a></li>
+            <li><a href="categorias.html?categoria=suspenso">Suspenso</a></li>
+            <li><a href="categorias.html?categoria=aventura">Aventura</a></li>
+            <li><a href="categorias.html?categoria=drama">Drama</a></li>
+            <li><a href="categorias.html?categoria=crimen">Crimen</a></li>
+            <li><a href="categorias.html?categoria=romance">Romance</a></li>
+            <li><a href="categorias.html?categoria=terror">Terror</a></li>
+            <li><a href="categorias.html?categoria=ciencia-ficcion">Ciencia Ficción</a></li>
+          </ul>
         </li>
-        <li><a href="canal.html" id="telegram-link">Canal</a></li>
+        <li><a href="canal.html" id="telegram-link-mobile">Canal</a></li>
       </ul>
     </nav>
-    
-    <div class="mobile-menu-icon">
-      <i class="fas fa-bars"></i>
-    </div>
-  </div>
-  
-  <nav class="mobile-nav">
-    <ul>
-      <li><a href="index.html" class="active">Inicio</a></li>
-      <li class="dropdown-mobile">
-        <a href="#" class="dropdown-toggle">Categorías</a>
-        <ul class="dropdown-list-mobile">
-          <li><a href="categorias.html?categoria=destacado">Destacado</a></li>
-          <li><a href="categorias.html?categoria=accion">Acción</a></li>
-          <li><a href="categorias.html?categoria=comedia">Comedia</a></li>
-          <li><a href="categorias.html?categoria=suspenso">Suspenso</a></li>
-          <li><a href="categorias.html?categoria=aventura">Aventura</a></li>
-          <li><a href="categorias.html?categoria=drama">Drama</a></li>
-          <li><a href="categorias.html?categoria=crimen">Crimen</a></li>
-          <li><a href="categorias.html?categoria=romance">Romance</a></li>
-          <li><a href="categorias.html?categoria=terror">Terror</a></li>
-          <li><a href="categorias.html?categoria=ciencia-ficcion">Ciencia Ficción</a></li>
-        </ul>
-      </li>
-      <li><a href="canal.html" id="telegram-link-mobile">Canal</a></li>
-    </ul>
-  </nav>
-  
-  <!-- Overlay para fondo oscuro cuando el menú móvil está abierto -->
-  <div class="mobile-nav-overlay"></div>
-</header>
+  </header>
 
   <main>
-    <section id="featured-carousel" class="featured-carousel">
-      <div class="carousel-container">
-      </div>
-      <div class="carousel-controls">
-        <button class="carousel-arrow prev">
-          <i class="fas fa-chevron-left"></i>
-        </button>
-        <div class="carousel-indicators"></div>
-        <button class="carousel-arrow next">
-          <i class="fas fa-chevron-right"></i>
-        </button>
-      </div>
-    </section>
-
-    <section class="latest-movies">
+    <section class="category-movies">
       <div class="section-header">
-        <h2>Últimos Estrenos</h2>
+        <h1 id="category-title">Películas</h1>
+        <p id="category-description" class="category-description"></p>
       </div>
-      <div class="movies-grid">
+      <div class="movies-grid" id="category-movies-grid">
+        <!-- Las películas se cargarán aquí dinámicamente -->
       </div>
 
       <div class="pagination">
@@ -110,13 +94,12 @@
           <i class="fas fa-chevron-left"></i> Anterior
         </button>
         <div class="page-numbers">
-          <span class="current-page">1</span> de <span class="total-pages">5</span>
+          <span class="current-page">1</span> de <span class="total-pages">1</span>
         </div>
-        <button class="pagination-btn next">
+        <button class="pagination-btn next" disabled>
           Siguiente <i class="fas fa-chevron-right"></i>
         </button>
       </div>
-      
     </section>
   </main>
 
@@ -137,6 +120,6 @@
   </footer>
 
   <script src="script/peliculas.js"></script>
-  <script src="script/carousel.js"></script>
+  <script src="script/categorias.js"></script>
 </body>
 </html>

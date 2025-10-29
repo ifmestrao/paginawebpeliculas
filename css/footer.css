@@ -26,8 +26,7 @@ footer {
   position: absolute;
   bottom: -8px;
   align-items: center;
-  margin-left: 10px;
-  left: 580px;
+  margin-left: -70px;
   width: 60px;
   height: 2px;
   background-color: #00BFA5; 
@@ -60,10 +59,13 @@ footer {
 }
 
 .footer-bottom {
-  text-align: center;
   padding: 20px;
   border-top: 1px solid #333333;
   color: #B0B0B0; 
+}
+
+.footer-bottom p {
+ text-align: center;
 }
 
 

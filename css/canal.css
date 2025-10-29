@@ -1,0 +1,219 @@
+/* Canal Page Styles */
+.canal-main {
+  min-height: calc(100vh - 140px);
+  background: linear-gradient(135deg, #0c0c0c 0%, #1a1a1a 100%);
+}
+
+/* Hero Section */
+.channels-hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+              url('../imagenes/cine-bg.jpg') center/cover;
+  padding: 80px 20px;
+  text-align: center;
+  color: white;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  background: linear-gradient(45deg, #00bfa5, #28eec0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  color: #b0b0b0;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Channels Section */
+.channels-section {
+  padding: 80px 20px;
+}
+
+.channels-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+}
+
+.channel-card {
+  background: linear-gradient(145deg, #1e1e1e, #2a2a2a);
+  border-radius: 20px;
+  padding: 40px 30px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  border: 1px solid #333;
+  position: relative;
+  overflow: hidden;
+}
+
+.channel-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(45deg, #00bfa5, #0081ff);
+}
+
+.channel-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.channel-icon {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+.channel-card:hover .channel-icon {
+  transform: scale(1.1);
+}
+
+.telegram-channel .channel-icon {
+  color: #0088cc;
+}
+
+.whatsapp-channel .channel-icon {
+  color: #25d366;
+}
+
+.instagram-channel .channel-icon {
+  color: #e4405f;
+}
+
+.channel-info h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: white;
+}
+
+.channel-info p {
+  color: #b0b0b0;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.channel-stats {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 25px;
+}
+
+.stat {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #b0b0b0;
+  font-size: 0.9rem;
+}
+
+.stat i {
+  font-size: 1rem;
+}
+
+.channel-join-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 30px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.telegram-btn {
+  background: linear-gradient(45deg, #0088cc, #00bfa5);
+  color: white;
+}
+
+.telegram-btn:hover {
+  background: linear-gradient(45deg, #0077b5, #00a58e);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 136, 204, 0.3);
+}
+
+.whatsapp-btn {
+  background: linear-gradient(45deg, #25d366, #128c7e);
+  color: white;
+}
+
+.whatsapp-btn:hover {
+  background: linear-gradient(45deg, #20bd5c, #0f7569);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
+}
+
+.instagram-btn {
+  background: linear-gradient(45deg, #e4405f, #833ab4);
+  color: white;
+}
+
+.instagram-btn:hover {
+  background: linear-gradient(45deg, #d32e4d, #722a9b);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(228, 64, 95, 0.3);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+  
+  .channels-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .channel-card {
+    padding: 30px 20px;
+  }
+  
+  .channel-stats {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .channels-hero {
+    padding: 60px 15px;
+  }
+  
+  .hero-content h1 {
+    font-size: 1.8rem;
+  }
+  
+  .hero-content p {
+    font-size: 1rem;
+  }
+  
+  .channels-section,
+  .benefits-section {
+    padding: 50px 15px;
+  }
+  
+  .channel-card {
+    padding: 25px 15px;
+  }
+  
+  .channel-icon {
+    font-size: 3rem;
+  }
+}

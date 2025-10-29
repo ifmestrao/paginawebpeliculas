@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Canal - CineWolf</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/canal.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <header id="main-header">
+    <div class="header-container">
+      <div class="logo-container">
+        <a href="index.html">
+          <img src="Icon/lOGO.png" alt="Logo" id="logo">
+        </a>
+      </div>
+
+      <div class="search-container">
+        <form id="search-form">
+          <input type="text" id="search-input" placeholder="Buscar">
+          <button type="submit" id="search-button">
+            <i class="fas fa-search"></i>
+          </button>
+        </form>
+      </div>
+
+      <nav class="desktop-nav">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li class="dropdown">
+            <a href="categorias.html">Categorias</a>
+            <div class="dropdown-content">
+              <a href="categorias.html?categoria=destacado">Destacado</a>
+              <a href="categorias.html?categoria=accion">Acción</a>
+              <a href="categorias.html?categoria=comedia">Comedia</a>
+              <a href="categorias.html?categoria=suspenso">Suspenso</a>
+              <a href="categorias.html?categoria=aventura">Aventura</a>
+              <a href="categorias.html?categoria=drama">Drama</a>
+              <a href="categorias.html?categoria=crimen">Crimen</a>
+              <a href="categorias.html?categoria=romance">Romance</a>
+              <a href="categorias.html?categoria=terror">Terror</a>
+              <a href="categorias.html?categoria=ciencia-ficcion">Ciencia Ficción</a>
+            </div>
+          </li>
+          <li><a href="canal.html" class="active">Canal</a></li>
+        </ul>
+      </nav>
+
+      <div class="mobile-menu-icon">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+
+    <nav class="mobile-nav">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li class="dropdown-mobile">
+          <a href="categorias.html" class="dropdown-toggle">Categorías</a>
+          <ul class="dropdown-list-mobile">
+            <li><a href="categorias.html?categoria=destacado">Destacado</a></li>
+            <li><a href="categorias.html?categoria=accion">Acción</a></li>
+            <li><a href="categorias.html?categoria=comedia">Comedia</a></li>
+            <li><a href="categorias.html?categoria=suspenso">Suspenso</a></li>
+            <li><a href="categorias.html?categoria=aventura">Aventura</a></li>
+            <li><a href="categorias.html?categoria=drama">Drama</a></li>
+            <li><a href="categorias.html?categoria=crimen">Crimen</a></li>
+            <li><a href="categorias.html?categoria=romance">Romance</a></li>
+            <li><a href="categorias.html?categoria=terror">Terror</a></li>
+            <li><a href="categorias.html?categoria=ciencia-ficcion">Ciencia Ficción</a></li>
+          </ul>
+        </li>
+        <li><a href="canal.html" class="active">Canal</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="canal-main">
+    <section class="channels-hero">
+      <div class="hero-content">
+        <h1>Únete a Nuestros Canales</h1>
+        <p>Mantente actualizado con los últimos estrenos, noticias de cine y contenido exclusivo</p>
+      </div>
+    </section>
+
+    <section class="channels-section">
+      <div class="channels-container">
+        <!-- Canal de Telegram -->
+        <div class="channel-card telegram-channel">
+          <div class="channel-icon">
+            <i class="fab fa-telegram"></i>
+          </div>
+          <div class="channel-info">
+            <h3>Telegram</h3>
+            <p>Únete a nuestro canal de Telegram para recibir notificaciones instantáneas de nuevos estrenos y contenido exclusivo.</p>
+            <div class="channel-stats">
+              <div class="stat">
+                <i class="fas fa-users"></i>
+                <span>Matenimiento</span>
+              </div>
+              <div class="stat">
+                <i class="fas fa-bell"></i>
+                <span>Matenimiento</span>
+              </div>
+            </div>
+            <a href="https://t.me/tucanaldecine" target="_blank" class="channel-join-btn telegram-btn">
+              <i class="fab fa-telegram"></i>
+              Unirse al Canal
+            </a>
+          </div>
+        </div>
+
+        <!-- Canal de WhatsApp -->
+        <div class="channel-card whatsapp-channel">
+          <div class="channel-icon">
+            <i class="fab fa-whatsapp"></i>
+          </div>
+          <div class="channel-info">
+            <h3>WhatsApp</h3>
+            <p>Recibe noticias y actualizaciones directamente en tu WhatsApp. Grupo exclusivo para amantes del cine.</p>
+            <div class="channel-stats">
+              <div class="stat">
+                <i class="fas fa-users"></i>
+                <span>Matenimiento</span>
+              </div>
+              <div class="stat">
+                <i class="fas fa-comment"></i>
+                <span>Matenimiento</span>
+              </div>
+            </div>
+            <a href="https://wa.me/1234567890" target="_blank" class="channel-join-btn whatsapp-btn">
+              <i class="fab fa-whatsapp"></i>
+              Unirse al Grupo
+            </a>
+          </div>
+        </div>
+
+        <!-- Canal de Instagram -->
+        <div class="channel-card instagram-channel">
+          <div class="channel-icon">
+            <i class="fab fa-instagram"></i>
+          </div>
+          <div class="channel-info">
+            <h3>Instagram</h3>
+            <p>Síguenos en Instagram para ver tráilers, behind the scenes, y las mejores escenas de películas.</p>
+            <div class="channel-stats">
+              <div class="stat">
+                <i class="fas fa-heart"></i>
+                <span>Matenimiento</span>
+              </div>
+              <div class="stat">
+                <i class="fas fa-video"></i>
+                <span>Matenimiento</span>
+              </div>
+            </div>
+            <a href="https://instagram.com/tucuenta" target="_blank" class="channel-join-btn instagram-btn">
+              <i class="fab fa-instagram"></i>
+              Seguir Cuenta
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-social">
+        <h4>Síguenos</h4>
+        <div class="social-icons">
+          <a href="https://t.me/tucanaldecine" target="_blank"><i class="fab fa-telegram"></i></a>
+          <a href="https://wa.me/1234567890" target="_blank"><i class="fab fa-whatsapp"></i></a>
+          <a href="https://instagram.com/tucuenta" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Isacc Mestra</p>
+    </div>
+  </footer>
+
+  <script src="script/canal.js"></script>
+</body>
+</html>

@@ -206,6 +206,7 @@ main {
   -webkit-box-orient: vertical;
   overflow: hidden;
   height: 48px;
+  line-height: 1.2;
 }
 
 .movie-meta {

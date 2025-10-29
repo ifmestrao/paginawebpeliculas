@@ -27,11 +27,16 @@
   align-items: center;
 }
 
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
 #logo {
-  width: 70px;
-  height: 70px;
-  border-radius: 50px;
+  width: 180px;  /* Ancho aumentado para formato horizontal */
+  height: 50px;  /* Altura reducida */
   transition: transform 0.3s ease;
+  object-fit: contain; /* Mantiene la proporción de la imagen */
 }
 
 #logo:hover {

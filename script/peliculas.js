@@ -1,8 +1,49 @@
 // Datos de películas
 const movies = [
   {
-    id: 1,
-    title: "Liga de la Justicia",
+    id: 24,
+    title: "Jurassic World: El Renacer",
+    year: 2025,
+    poster: "imagenes/jurasic.jpg",
+    rating: 6.1,
+    quality: "Full HD Bluray",
+    videoUrl: ""
+  },
+  {
+    id: 23,
+    title: "Capitán América: Un nuevo mundo",
+    year: 2025,
+    poster: "imagenes/captain-america.jpg",
+    rating: 5.8,
+    quality: "Full HD Bluray"
+  },
+  {
+    id: 22,
+    title: "Estado eléctrico",
+    year: 2025,
+    poster: "imagenes/electric.jpg",
+    rating: 6.1,
+    quality: "Full HD Bluray"
+  },
+  {
+    id: 21,
+    title: "Oni-Goroshi: Ciudad de los demonios",
+    year: 2025,
+    poster: "imagenes/oni.jpg",
+    rating: 5.4,
+    quality: "Full HD Bluray"
+  },
+  {
+    id: 20,
+    title: "El conjuro 4: Últimos ritos",
+    year: 2025,
+    poster: "imagenes/conjuro4.jpg",
+    rating: 6.3,
+    quality: "Full HD Bluray"
+  },
+  {
+    id: 19,
+    title: "La Liga de la Justicia de Zack Snyder",
     year: 2024,
     poster: "imagenes/ligadejusticia.webp",
     rating: 8.2,
@@ -10,215 +51,155 @@ const movies = [
     videoUrl: ""
   },
   {
-    id: 2,
-    title: "Oppenheimer",
-    year: 2023,
-    poster: "imagenes/oppenheimer.webp",
-    rating: 7.5,
-    quality: "HD",
-    videoUrl: ""
-  },
-  {
-    id: 3,
-    title: "Megalodón 2: El gran abismo",
-    year: 2023,
-    poster: "imagenes/melagodon.webp",
-    rating: 6.8,
-    quality: "Full HD",
-    videoUrl: ""
-  },
-  {
-    id: 4,
-    title: "Jurassic World: El Renacer (2025)",
-    year: 2025,
-    poster: "imagenes/jurasic.jpg",
-    rating: 7.4,
-    quality: "HD",
-    videoUrl: ""
-  },
-  {
-    id: 5,
-    title: "Indiana Jones y el llamado del destino",
-    year: 2023,
-    poster: "imagenes/indiana jones.webp",
-    rating: 5.9,
-    quality: "HD",
-    videoUrl: ""
-  },
-  {
-    id: 6,
-    title: "Drácula: El último viaje del Demeter",
-    year: 2023,
-    poster: "imagenes/Fantasma.webp",
-    rating: 7.0,
-    quality: "4K UHD"
-  },
-
-  {
-    id: 7,
-    title: "Misión imposible: sentencia mortal",
-    year: 2023,
-    poster: "imagenes/mision imposible.webp",
-    rating: 7.0,
-    quality: "4K UHD"
-  },
-
-  {
-    id: 8,
-    title: "Implacable ",
-    year: 2023,
-    poster: "imagenes/implacable.jpg",
-    rating: 7.0,
-    quality: "Full HD",
-    videoUrl: ""
-  },
-
-  {
-    id: 9,
-    title: "Pecadores",
-    year: 2023,
-    poster: "imagenes/sinners.jpg",
-    rating: 7.0,
-    quality: "4K UHD",
-    videoUrl: ""
-  }
-  ,
-
-  {
-    id: 10,
-    title: "Capitán América: Un nuevo mundo",
-    year: 2025,
-    poster: "imagenes/captain-america.jpg",
-    rating: 7.0,
-    quality: "4K Ultra HD"
-  },
-  {
-    id: 11,
+    id: 18,
     title: "Mufasa: El rey león",
     year: 2024,
     poster: "imagenes/mufasa.jpg",
-    rating: 7.4,
-    quality: "4K Ultra HD"
+    rating: 6.7,
+    quality: "Full HD Bluray"
   },
   {
-    id: 12,
-    title: "Estado eléctrico",
-    year: 2025,
-    poster: "imagenes/electric.jpg",
-    rating: 7.4,
-    quality: "HD"
-  },
-
-  {
-    id: 13,
-    title: "Oni-Goroshi: Ciudad de los demonios",
-    year: 2024,
-    poster: "imagenes/oni.jpg",
-    rating: 7.4,
-    quality: "Full HD"
-  },
-
-  {
-    id: 14,
+    id: 17,
     title: "Kraven el cazador",
     year: 2024,
     poster: "imagenes/kraven.jpg",
-    rating: 7.4,
-    quality: "HD"
+    rating: 5.4,
+    quality: "Full HD Bluray"
   },
-
-  {
-    id: 15,
-    title: "Halloween: La noche final ",
-    year: 2024,
-    poster: "imagenes/halloween.jpg",
-    rating: 7.4,
-    quality: "4K Ultra HD"
-  },
-
   {
     id: 16,
     title: "Lift: Un robo de primera clase",
     year: 2024,
     poster: "imagenes/lift.jpg",
-    rating: 7.4,
-    quality: "4K UHD"
+    rating: 5.5,
+    quality: "Full HD Bluray"
   },
-
   {
-    id: 17,
+    id: 15,
     title: "Bad Boys: Hasta la muerte",
     year: 2024,
     poster: "imagenes/bad.jpg",
-    rating: 7.4,
-    quality: "HD"
+    rating: 7.7,
+    quality: "Full HD Bluray"
   },
-
   {
-    id: 18,
+    id: 14,
+    title: "Oppenheimer",
+    year: 2023,
+    poster: "imagenes/oppenheimer.webp",
+    rating: 8.4,
+    quality: "Full HD Bluray",
+    videoUrl: ""
+  },
+  {
+    id: 13,
+    title: "Megalodón 2: El gran abismo",
+    year: 2023,
+    poster: "imagenes/megalodon2.webp",
+    rating: 6.8,
+    quality: "Full HD",
+    videoUrl: ""
+  },
+  {
+    id: 12,
+    title: "Indiana Jones y el llamado del destino",
+    year: 2023,
+    poster: "imagenes/indiana jones.webp",
+    rating: 5.9,
+    quality: "Full HD",
+    videoUrl: ""
+  },
+  {
+    id: 11,
+    title: "Drácula: El último viaje del Demeter",
+    year: 2023,
+    poster: "imagenes/Fantasma.webp",
+    rating: 6.1,
+    quality: "4K UHD"
+  },
+  {
+    id: 10,
+    title: "Misión imposible: sentencia mortal",
+    year: 2023,
+    poster: "imagenes/mision imposible.webp",
+    rating: 7.7,
+    quality: "4K UHD"
+  },
+  {
+    id: 9,
+    title: "Implacable",
+    year: 2023,
+    poster: "imagenes/implacable.jpg",
+    rating: 5.1,
+    quality: "Full HD Bluray",
+    videoUrl: ""
+  },
+  {
+    id: 8,
+    title: "Pecadores",
+    year: 2023,
+    poster: "imagenes/sinners.jpg",
+    rating: 7.0,
+    quality: "Full HD Bluray",
+    videoUrl: ""
+  },
+  {
+    id: 7,
     title: "Ferrari",
     year: 2023,
     poster: "imagenes/ferrari.jpg",
-    rating: 7.4,
-    quality: "HD"
+    rating: 6.5,
+    quality: "Full HD"
   },
-
   {
-    id: 19,
-    title: "Guardianes de la Galaxia: Especial de las fiestas",
+    id: 6,
+    title: "Halloween: La noche final",
     year: 2022,
-    poster: "imagenes/theguardians.jpg",
-    rating: 7.4,
-    quality: "HD"
+    poster: "imagenes/halloween.jpg",
+    rating: 5.0,
+    quality: "Full HD"
   },
-
   {
-    id: 20,
+    id: 5,
     title: "Tren bala",
     year: 2022,
     poster: "imagenes/bullet.jpg",
-    rating: 7.4,
+    rating: 7.3,
     quality: "Full HD"
   },
-
   {
-    id: 21,
+    id: 4,
     title: "Turno de día",
     year: 2022,
     poster: "imagenes/day.jpg",
     rating: 7.4,
-    quality: "HD"
-  }
-  ,
-
+    quality: "Full HD"
+  },
   {
-    id: 22,
+    id: 3,
     title: "Asesino sin memoria",
     year: 2022,
     poster: "imagenes/asesino.jpg",
-    rating: 7.4,
-    quality: "HD"
+    rating: 5.6,
+    quality: "Full HD Bluray"
   },
-
   {
-    id: 23,
+    id: 2,
     title: "Depredador: La Presa",
     year: 2022,
     poster: "imagenes/depredador.jpg",
-    rating: 7.4,
-    quality: "HD"
+    rating: 7.3,
+    quality: "Full HD Bluray"
   },
-
   {
-    id: 24,
-    title: "Rápidos y furiosos 9 ",
+    id: 1,
+    title: "Rápidos y furiosos 9",
     year: 2021,
     poster: "imagenes/f9.jpg",
-    rating: 9.5,
-    quality: "Full HD"
-  }
+    rating: 5.2,
+    quality: "Full HD Bluray"
+  },
 
-  
 ];
 
 // paginación
@@ -242,12 +223,15 @@ function loadMovies() {
   if (movieGrid) {
     movieGrid.innerHTML = currentMovies.map(movie => createMovieCard(movie)).join('');
     updatePaginationUI();
+    setupMovieClickHandlers();
   }
 }
 
 function createMovieCard(movie) {
+  // CAMBIÉ: Quité el <a href> y lo reemplacé con un div normal
+  // para manejar el click mediante JavaScript
   return `
-    <a href="${movie.videoUrl}" target="_blank" class="movie-card" data-id="${movie.id}">
+    <div class="movie-card" data-id="${movie.id}">
       <div class="movie-poster">
         <img src="${movie.poster}" alt="${movie.title}">
         <div class="movie-quality">${movie.quality}</div>
@@ -268,9 +252,10 @@ function createMovieCard(movie) {
           </div>
         </div>
       </div>
-    </a>
+    </div>
   `;
 }
+
 //nuevo
 function setupMovieClickHandlers() {
   const movieCards = document.querySelectorAll('.movie-card');
@@ -278,7 +263,8 @@ function setupMovieClickHandlers() {
   movieCards.forEach(card => {
     card.addEventListener('click', function() {
       const movieId = this.dataset.id;
-      // Redirigir a la página de detalles con el ID de la película
+      // CAMBIÉ: Redirigir a la página de detalles con el ID de la película
+      // Esto funciona tanto en PC como en móviles
       window.location.href = `pelidetalle.html?id=${movieId}`;
     });
   });
@@ -382,12 +368,124 @@ function displaySearchResults(results, query) {
       </div>
     </section>
   `;
-  
-  // Ocultar contenido actual y mostrar resultados
   mainContent.innerHTML = searchResultsHTML;
+  setupMovieClickHandlers();;
 }
 
 
+
+// Menú móvil y submenú
+
+// Elementos del menú móvil
+const menuIcon = document.querySelector('.mobile-menu-icon');
+const mobileNav = document.querySelector('.mobile-nav');
+const dropdownToggle = document.querySelector('.dropdown-toggle');
+const dropdownList = document.querySelector('.dropdown-list-mobile');
+const mobileNavOverlay = document.querySelector('.mobile-nav-overlay');
+
+// ========== FUNCIONALIDAD DEL MENÚ ==========
+
+// Alternar menú móvil completo
+menuIcon.addEventListener('click', (e) => {
+  e.stopPropagation();
+  mobileNav.classList.toggle('active');
+  mobileNavOverlay.classList.toggle('active');
+
+  if (!mobileNav.classList.contains('active')) {
+    dropdownList.classList.remove('show');
+  }
+});
+
+// Alternar submenú "Categorías" en móvil
+dropdownToggle.addEventListener('click', function(e) {
+  e.preventDefault();
+  e.stopPropagation();
+  dropdownList.classList.toggle('show');
+});
+
+// Cerrar menú móvil al hacer click fuera
+document.addEventListener('click', (e) => {
+  if (mobileNav.classList.contains('active') && 
+      !mobileNav.contains(e.target) && 
+      !menuIcon.contains(e.target)) {
+    mobileNav.classList.remove('active');
+    mobileNavOverlay.classList.remove('active');
+    dropdownList.classList.remove('show');
+  }
+});
+
+// Cerrar con el overlay
+mobileNavOverlay.addEventListener('click', () => {
+  mobileNav.classList.remove('active');
+  mobileNavOverlay.classList.remove('active');
+  dropdownList.classList.remove('show');
+});
+
+// Manejar la selección activa en ambos menús
+function setActiveLink(clickedLink) {
+  // Remover clase active de todos los enlaces del mismo nivel
+  const allLinks = document.querySelectorAll('.desktop-nav a, .mobile-nav a');
+  allLinks.forEach(link => {
+    link.classList.remove('active');
+  });
+  
+  // Agregar clase active al enlace clickeado
+  clickedLink.classList.add('active');
+  
+  // Cerrar menú móvil después de seleccionar (solo en móvil)
+  if (window.innerWidth <= 992) {
+    mobileNav.classList.remove('active');
+    mobileNavOverlay.classList.remove('active');
+    dropdownList.classList.remove('show');
+  }
+}
+
+// Configurar event listeners para navegación
+function setupNavigation() {
+  // Enlaces del menú desktop
+  const desktopLinks = document.querySelectorAll('.desktop-nav a');
+  desktopLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+      if (!this.parentElement.classList.contains('dropdown') || 
+          this.getAttribute('href') !== '#') {
+        setActiveLink(this);
+      }
+    });
+  });
+  
+  // Enlaces del menú móvil
+  const mobileLinks = document.querySelectorAll('.mobile-nav a');
+  mobileLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+      if (!this.classList.contains('dropdown-toggle')) {
+        setActiveLink(this);
+      }
+    });
+  });
+  
+  // Enlaces de categorías del dropdown desktop
+  const desktopCategoryLinks = document.querySelectorAll('.dropdown-content a');
+  desktopCategoryLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+      setActiveLink(this);
+    });
+  });
+  
+  // Enlaces de categorías del dropdown móvil
+  const mobileCategoryLinks = document.querySelectorAll('.dropdown-list-mobile a');
+  mobileCategoryLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+      setActiveLink(this);
+    });
+  });
+}
+
+// Inicializar navegación cuando el DOM esté listo
+document.addEventListener('DOMContentLoaded', function() {
+  setupNavigation();
+});
+
+/*
 const menuIcon = document.querySelector('.mobile-menu-icon');
 const mobileNav = document.querySelector('.mobile-nav');
 const dropdownToggle = document.querySelector('.dropdown-toggle');
@@ -407,10 +505,4 @@ menuIcon.addEventListener('click', () => {
 dropdownToggle.addEventListener('click', function(e) {
   e.preventDefault();
   dropdownList.classList.toggle('show');
-});
-
-
-
-
-
-
+});*/
