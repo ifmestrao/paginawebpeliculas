@@ -619,7 +619,7 @@ const moviesData = {
       online: [
         { 
           name: "Google Drive", 
-          url: "", 
+          url: "https://drive.google.com/file/d/17kwGaHh1WI_v7FpvKYIXdbGjK5Wt7zTg/view?usp=sharing", 
           quality: "1080p", 
           audio: "Latino e Inglés",
           type: "online"
@@ -642,7 +642,7 @@ const moviesData = {
       download: [
         { 
           name: "Google Drive", 
-          url: "", 
+          url: "https://drive.google.com/file/d/17kwGaHh1WI_v7FpvKYIXdbGjK5Wt7zTg/view?usp=sharing", 
           quality: "1080p", 
           size: "2.7 GB",
           audio: "Latino e Inglés",

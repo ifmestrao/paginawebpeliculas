@@ -21,6 +21,8 @@ footer {
   position: relative;
 }
 
+/*
+
 .footer-social h4::after {
   content: '';
   position: absolute;
@@ -31,6 +33,7 @@ footer {
   height: 2px;
   background-color: #00BFA5; 
 }
+  */
 
 .social-icons {
   display: flex;
