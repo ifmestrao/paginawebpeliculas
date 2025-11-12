@@ -2,43 +2,43 @@
 const movies = [
   {
     id: 24,
+    title: "Los 4 Fantásticos: Primeros pasos",
+    year: 2025,
+    poster: "imagenes/4fantásticos.webp",
+    rating: 7.2,
+    quality: "Full HD"
+  },
+  {
+    id: 23,
+    title: "El conjuro 4: Últimos ritos",
+    year: 2025,
+    poster: "imagenes/conjuro4.jpg",
+    rating: 6.3,
+    quality: "Full HD Bluray"
+  },
+  {
+    id: 22,
     title: "Jurassic World: El Renacer",
     year: 2025,
     poster: "imagenes/jurasic.jpg",
     rating: 6.1,
     quality: "Full HD Bluray",
     videoUrl: ""
-  },
+  },  
   {
-    id: 23,
+    id: 21,
     title: "Capitán América: Un nuevo mundo",
     year: 2025,
-    poster: "imagenes/captain-america.jpg",
+    poster: "imagenes/captain-america.webp",
     rating: 5.8,
     quality: "Full HD Bluray"
   },
   {
-    id: 22,
+    id: 20,
     title: "Estado eléctrico",
     year: 2025,
     poster: "imagenes/electric.jpg",
     rating: 6.1,
-    quality: "Full HD Bluray"
-  },
-  {
-    id: 21,
-    title: "Oni-Goroshi: Ciudad de los demonios",
-    year: 2025,
-    poster: "imagenes/oni.jpg",
-    rating: 5.4,
-    quality: "Full HD Bluray"
-  },
-  {
-    id: 20,
-    title: "El conjuro 4: Últimos ritos",
-    year: 2025,
-    poster: "imagenes/conjuro4.jpg",
-    rating: 6.3,
     quality: "Full HD Bluray"
   },
   {
@@ -54,7 +54,7 @@ const movies = [
     id: 18,
     title: "Mufasa: El rey león",
     year: 2024,
-    poster: "imagenes/mufasa.jpg",
+    poster: "imagenes/mufasa.jpeg",
     rating: 6.7,
     quality: "Full HD Bluray"
   },
@@ -102,7 +102,7 @@ const movies = [
   },
   {
     id: 12,
-    title: "Indiana Jones y el llamado del destino",
+    title: "Indiana Jones 5 Y El Dial Del Destino",
     year: 2023,
     poster: "imagenes/indiana jones.webp",
     rating: 5.9,
@@ -332,10 +332,15 @@ function initializeApp() {
 }
 
 // Búsqueda 
+// ========== FUNCIONALIDAD DE BÚSQUEDA ==========
+
+function initializeApp() {
+  setupSearch();
+}
+
 function setupSearch() {
   const searchForm = document.getElementById('search-form');
   const searchInput = document.getElementById('search-input');
-  const mainContent = document.querySelector('main');
   
   searchForm.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -354,7 +359,6 @@ function setupSearch() {
 function displaySearchResults(results, query) {
   const mainContent = document.querySelector('main');
   
-  // resultados
   const searchResultsHTML = `
     <section class="search-results">
       <div class="section-header">
@@ -368,8 +372,9 @@ function displaySearchResults(results, query) {
       </div>
     </section>
   `;
+  
   mainContent.innerHTML = searchResultsHTML;
-  setupMovieClickHandlers();;
+  setupMovieClickHandlers();
 }
 
 

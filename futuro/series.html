@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Series - CineWolf</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/pelicula.css">
+  <link rel="stylesheet" href="css/series.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <header id="main-header">
+    <div class="header-container">
+      <div class="logo-container">
+        <a href="index.html">
+          <img src="Icon/LOGO.PNG" alt="Logo" id="logo">
+        </a>
+      </div>
+
+      <div class="search-container">
+        <form id="search-form">
+          <input type="text" id="search-input" placeholder="Buscar series...">
+          <button type="submit" id="search-button">
+            <i class="fas fa-search"></i>
+          </button>
+        </form>
+      </div>
+
+      <nav class="desktop-nav">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li class="dropdown">
+            <a href="#">Categorias</a>
+            <div class="dropdown-content">
+              <a href="#">Destacado</a>
+              <a href="#">Acción</a>
+              <a href="#">Comedia</a>
+              <a href="#">Suspenso</a>
+              <a href="#">Aventura</a>
+              <a href="#">Drama</a>
+              <a href="#">Crimen</a>
+              <a href="#">Romance</a>
+              <a href="#">Terror</a>
+              <a href="#">Ciencia Ficción</a>
+            </div>
+          </li>
+          <li><a href="series.html" class="active">Series</a></li>
+          <li><a href="#" id="telegram-link">Canal</a></li>
+        </ul>
+      </nav>
+      
+      <div class="mobile-menu-icon">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+    
+    <nav class="mobile-nav">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li class="dropdown-mobile">
+          <a href="#" class="dropdown-toggle">Categorías</a>
+          <ul class="dropdown-list-mobile">
+            <li><a href="#">Destacado</a></li>
+            <li><a href="#">Acción</a></li>
+            <li><a href="#">Comedia</a></li>
+            <li><a href="#">Suspenso</a></li>
+            <li><a href="#">Aventura</a></li>
+            <li><a href="#">Drama</a></li>
+            <li><a href="#">Crimen</a></li>
+            <li><a href="#">Romance</a></li>
+            <li><a href="#">Terror</a></li>
+            <li><a href="#">Ciencia Ficción</a></li>
+          </ul>
+        </li>
+        <li><a href="series.html" class="active">Series</a></li>
+        <li><a href="#" id="telegram-link-mobile">Canal</a></li>
+      </ul>
+    </nav>
+    
+    <div class="mobile-nav-overlay"></div>
+  </header>
+
+  <main>
+    <section class="latest-movies">
+      <div class="section-header">
+        <h2>Series Populares</h2>
+      </div>
+      <div class="movies-grid" id="series-grid">
+        <!-- Las series se cargarán aquí con JavaScript -->
+      </div>
+
+      <div class="pagination">
+        <button class="pagination-btn prev" disabled>
+          <i class="fas fa-chevron-left"></i> Anterior
+        </button>
+        <div class="page-numbers">
+          <span class="current-page">1</span> de <span class="total-pages">1</span>
+        </div>
+        <button class="pagination-btn next">
+          Siguiente <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-social">
+        <h4>Síguenos</h4>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-telegram"></i></a>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-tiktok"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Isacc Mestra</p>
+    </div>
+  </footer>
+
+  <script src="script/series.js"></script>
+  <script src="script/menu.js"></script>
+</body>
+</html>

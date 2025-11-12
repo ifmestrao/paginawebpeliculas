@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Detalles de Película - CineCalidad</title>
+  <title>Peliculas</title>
+  <link rel="icon" href="Icon/icon.png">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/header.css">
   <link rel="stylesheet" href="css/footer.css">
@@ -133,23 +134,53 @@
         </div>
       </div>
     </div>
-    
-    <div class="action-buttons">
-      <button id="trailer-btn" class="action-btn trailer-btn">
-        <i class="fas fa-play"></i>
-        Ver Trailer
-      </button>
-      
-      <button id="watch-online-btn" class="action-btn watch-btn">
-        <i class="fas fa-tv"></i>
-        VER ONLINE
-      </button>
-      
-      <button id="download-btn" class="action-btn download-btn">
-        <i class="fas fa-download"></i>
-        DESCARGAR
-      </button>
+
+    <!-- Sección del Trailer (arriba de todo, inicialmente oculta) -->
+<section id="movie-trailer" class="movie-trailer-section hidden">
+  <div class="trailer-container">
+    <h2>Tráiler</h2>
+    <div id="main-trailer-player" class="main-trailer-player">
+      <!-- El trailer se cargará aquí cuando se haga click -->
     </div>
+  </div>
+</section>
+
+<!-- Botones de acción -->
+<div class="movie-actions">
+  <button id="watch-trailer-btn" class="action-btn trailer-btn">
+    <i class="fas fa-play"></i> VER TRAILER
+  </button>
+  <button id="watch-online-btn" class="action-btn online-btn">
+    <i class="fas fa-eye"></i> VER ONLINE
+  </button>
+  <button id="download-btn" class="action-btn download-btn">
+    <i class="fas fa-download"></i> DESCARGAR
+  </button>
+</div>
+
+<!-- Contenedor para ver online (con servidores) -->
+<div id="online-container" class="content-container hidden">
+  <div class="container-header">
+    <h3>Ver Película Online</h3>
+  </div>
+  <div class="servers-list">
+    <!-- Aquí se cargarán los servidores para ver online -->
+  </div>
+</div>
+
+<!-- Contenedor para descargar -->
+<div id="download-container" class="content-container hidden">
+  <div class="container-header">
+    <h3>Descargar Película</h3>
+  </div>
+  <div class="servers-list">
+    <!-- Aquí se cargarán los servidores para descargar -->
+  </div>
+</div>
+
+
+    
+
   </main>
 
     <!-- Sección de Comentarios -->

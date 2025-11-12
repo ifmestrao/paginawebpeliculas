@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detalle Serie - CineWolf</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="series.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <header id="main-header">
+    <!-- Mismo header que en pelidetalle.html -->
+    <div class="header-container">
+      <div class="logo-container">
+        <a href="index.html">
+          <img src="Icon/IconWeb.jpg" alt="Logo" id="logo">
+        </a>
+      </div>
+
+      <div class="search-container">
+        <form id="search-form">
+          <input type="text" id="search-input" placeholder="Buscar...">
+          <button type="submit" id="search-button">
+            <i class="fas fa-search"></i>
+          </button>
+        </form>
+      </div>
+
+      <nav class="desktop-nav">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li class="dropdown">
+            <a href="#">Categorias</a>
+            <div class="dropdown-content">
+              <a href="#">Destacado</a>
+              <a href="#">Acción</a>
+              <a href="#">Comedia</a>
+              <a href="#">Suspenso</a>
+              <a href="#">Aventura</a>
+              <a href="#">Drama</a>
+              <a href="#">Crimen</a>
+              <a href="#">Romance</a>
+              <a href="#">Terror</a>
+              <a href="#">Ciencia Ficción</a>
+            </div>
+          </li>
+          <li><a href="series.html" class="active">Series</a></li>
+          <li><a href="#" id="telegram-link">Canal</a></li>
+        </ul>
+      </nav>
+      
+      <div class="mobile-menu-icon">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+    
+    <!-- Menú móvil -->
+    <nav class="mobile-nav">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li class="dropdown-mobile">
+          <a href="#" class="dropdown-toggle">Categorías</a>
+          <ul class="dropdown-list-mobile">
+            <li><a href="#">Destacado</a></li>
+            <li><a href="#">Acción</a></li>
+            <li><a href="#">Comedia</a></li>
+            <li><a href="#">Suspenso</a></li>
+            <li><a href="#">Aventura</a></li>
+            <li><a href="#">Drama</a></li>
+            <li><a href="#">Crimen</a></li>
+            <li><a href="#">Romance</a></li>
+            <li><a href="#">Terror</a></li>
+            <li><a href="#">Ciencia Ficción</a></li>
+          </ul>
+        </li>
+        <li><a href="series.html" class="active">Series</a></li>
+        <li><a href="#" id="telegram-link-mobile">Canal</a></li>
+      </ul>
+    </nav>
+    
+    <div class="mobile-nav-overlay"></div>
+  </header>
+
+  <main class="series-detail">
+    <!-- Información principal de la serie -->
+    <section class="series-main-info">
+      <div class="series-poster-container">
+        <img id="series-poster" src="" alt="" class="series-poster">
+        <div class="series-badge-main" id="series-seasons"></div>
+      </div>
+      
+      <div class="series-info">
+        <h1 id="series-title"></h1>
+        
+        <div class="series-meta">
+          <div class="series-rating">
+            <div id="series-stars" class="stars-container"></div>
+            <span id="series-rating-text" class="rating-text"></span>
+          </div>
+          <span id="series-year" class="year"></span>
+          <span id="series-quality" class="quality"></span>
+        </div>
+        
+        <p id="series-description" class="series-description"></p>
+        
+        <div class="series-details-grid">
+          <div class="detail-item">
+            <strong>Títulos:</strong>
+            <span id="series-titles"></span>
+          </div>
+          <div class="detail-item">
+            <strong>Audio:</strong>
+            <span id="series-audio"></span>
+          </div>
+          <div class="detail-item">
+            <strong>Géneros:</strong>
+            <span id="series-genres"></span>
+          </div>
+          <div class="detail-item">
+            <strong>Director:</strong>
+            <span id="series-director"></span>
+          </div>
+          <div class="detail-item">
+            <strong>Elenco:</strong>
+            <span id="series-cast"></span>
+          </div>
+          <div class="detail-item">
+            <strong>Temporadas:</strong>
+            <span id="series-total-seasons"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Temporadas y Capítulos -->
+    <section class="seasons-section">
+      <div class="section-header">
+        <h2>Temporadas y Capítulos</h2>
+      </div>
+      
+      <div class="seasons-container" id="seasons-container">
+        <!-- Las temporadas se cargarán aquí con JavaScript -->
+      </div>
+    </section>
+
+    <!-- Botones de acción -->
+    <div class="series-actions">
+      <button id="watch-trailer-btn" class="action-btn trailer-btn">
+        <i class="fas fa-play"></i> VER TRAILER
+      </button>
+    </div>
+
+    <!-- Trailer -->
+    <section id="series-trailer" class="series-trailer-section hidden">
+      <div class="trailer-container">
+        <h2>Tráiler</h2>
+        <div id="series-trailer-player" class="main-trailer-player"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-social">
+        <h4>Síguenos</h4>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-telegram"></i></a>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-tiktok"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Isacc Mestra</p>
+    </div>
+  </footer>
+
+  <script src="script/seriedetalle.js"></script>
+</body>
+</html>

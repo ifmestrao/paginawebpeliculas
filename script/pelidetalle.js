@@ -2,80 +2,79 @@
 document.addEventListener('DOMContentLoaded', function() {
   loadMovieDetails();
   setupActionButtons();
+  initializeContainers(); 
 });
 
 // Datos extendidos de películas con toda la información
 const moviesData = {
   24: {
     id: 24,
-    title: "Jurassic World: El Renacer",
+    title: "Los 4 Fantásticos: Primeros pasos ",
     year: 2025,
-    poster: "imagenes/jurasic.jpg",
-    rating: 6.1,
-    quality: " Full HD Bluray",
-    description: "Cinco años después de los eventos de Jurassic World Dominion, la ecología del planeta resulta inhóspita para los dinosaurios. Los que quedan se mantienen en entornos ecuatoriales. Las tres criaturas más grandes en esta biosfera tropical tienen la clave para una droga que tiene increíbles beneficios para la humanidad.",
-    titles: "Jurassic World: El Renacer | Jurassic World: Renace | Jurassic World: Rebirth",
-    genres: ["Acción" , "Aventura" , "Ciencia ficción" , "Suspenso"],
+    poster: "imagenes/4fantásticos.webp",
+    rating: 7.2,
+    quality: "Full HD", 
+    description: "En un mundo retro futurista, la primera familia de Marvel se ve forzada a equilibrar sus papeles como héroes con la fuerza de sus lazos familiares, mientras defienden a la Tierra de un voraz dios espacial llamado Galactus y su enigmática emisaria, Silver Surfer.",
+    titles: "Los 4 Fantásticos: Primeros pasos | The Fantastic Four: First Steps",
+    genres: ["Acción", "Aventura", "Ciencia ficción"],
     audio: "Latino y Inglés subtitulada",
-    director: "Gareth Edwards",
-    cast: ["Scarlett Johansson, Mahershala Ali, Jonathan Bailey, Rupert Friend, Manuel Garcia-Rulfo, Luna Blaise, David Iacono, Audrina Miranda, Philippine Velge, Bechir Sylvain"],
-    trailerUrl: "",
-    watchUrl: "https://drive.google.com/file/d/14VmBzK8uXfwQnwZqnixWFr8L8dU8YbMk/view?usp=sharing",
-    downloadUrl: ""
+    director: "Matt Shakman",
+    cast: ["Pedro Pascal, Vanessa Kirby, Ebon Moss-Bachrach, Joseph Quinn, Ralph Ineson, Julia Garner, Natasha Lyonne, Paul Walter Hauser, Sarah Niles, Mark Gatiss, Ada Scott"],
+    trailerUrl: "https://www.youtube.com/watch?v=waf9snfaUFw", 
+    servers: {
+      online: [
+        { 
+          name: "Google Drive", 
+          url: "", 
+          quality: "1080p", 
+          audio: "Latino e Inglés",
+          type: "online"
+        },
+        { 
+          name: "Proximamente", 
+          url: "#", 
+          quality: "", 
+          audio: "",
+          type: ""
+        },
+        { 
+          name: "Proximamente", 
+          url: "#", 
+          quality: "", 
+          audio: "",
+          type: "online"
+        }
+      ],
+      download: [
+        { 
+          name: "Google Drive", 
+          url: "", 
+          quality: "1080p", 
+          size: " GB",
+          audio: "Latino e Inglés",
+          type: "download"
+        },
+        { 
+          name: "Proximamente", 
+          url: "", 
+          quality: "", 
+          size: "",
+          audio: "",
+          type: ""
+        },
+        { 
+          name: "Proximamente", 
+          url: "", 
+          quality: "", 
+          size: "",
+          audio: "",
+          type: ""
+        }
+      ]
+    }
   },
   23: {
     id: 23,
-    title: "Capitán América: Un nuevo mundo",
-    year: 2025,
-    poster: "imagenes/captain-america.jpg",
-    rating: 5.8, 
-    quality: "Full HD Bluray",
-    description: "Sam Wilson ha tomado oficialmente la responsabilidad de ser Capitán América. Después de reunirse con el recién elegido presidente de Estados Unidos, Sam se encuentra en medio de un incidente internacional. Debe descubrir la razón detrás de un nefasto plan antes de que la mente maestra tenga a todo el mundo viendo rojo.",
-    titles: "Capitán América: Un nuevo mundo | Captain America: Brave New World",
-    genres: ["Acción", "Aventura", "Ciencia ficción"],
-    audio: "Latino y Inglés subtitulada",
-    director: "Julius Onah",
-    cast: ["Anthony Mackie, Harrison Ford, Danny Ramirez, Shira Haas, Carl Lumbly, Tim Blake Nelson, Giancarlo Esposito, Liv Tyler, Xosha Roquemore"],
-    trailerUrl: "",
-    watchUrl: "",
-    downloadUrl: ""
-  },
-  22: {
-    id: 22,
-    title: "Estado eléctrico",
-    year: 2025,
-    poster: "imagenes/electric.jpg",
-    rating: 6.1, 
-    quality: "Full HD Bluray",
-    description: "Una adolescente huérfana vive en una sociedad donde los robots conscientes de caricaturas y mascotas, que una vez sirvieron en paz entre los humanos, ahora viven en el exilio tras una rebelión fallida. Pronto ella se embarca en un viaje con un misterioso robot para encontrar a su hermano perdido, juntándose con un contrabandista y su curioso compañero.",
-    titles: "Estado eléctrico | The Electric State",
-    genres: ["Acción", "Aventura"],
-    audio: "Latino y Inglés subtitulada",
-    director: "Anthony Russo, Joe Russo",
-    cast: ["Chris Pratt, Millie Bobby Brown, Woody Harrelson, Ke Huy Quan, Woody Norman, Ann Russo, Greg Cromer, Vince Pisani, Camrus Johnson, Juan Uribe Brandi"],
-    trailerUrl: "",
-    watchUrl: "",
-    downloadUrl: ""
-  },
-  21: {
-    id: 21,
-    title: "Oni-Goroshi: Ciudad de los demonios",
-    year: 2025,
-    poster: "imagenes/oni.jpg",
-    rating: 5.4,
-    quality: "Full HD Bluray", 
-    description: "Inculpado por el asesinato de su familia y dado por muerto, un ex sicario no se detendrá ante nada para obtener su venganza sobre, los demonios enmascarados que se han apoderado de su ciudad.",
-    titles: "Oni-Goroshi: Ciudad de los demonios | Demon City | Oni Goroshi",
-    genres: ["Acción", "Crimen", "Fantasía", "Suspenso"],
-    audio: "Latino y Inglés subtitulada",
-    director: "Seiji Tanaka",
-    cast: ["Tôma Ikuta, Masahiro Higashide, Miou Tanaka, Ami Tôma, Tarô Suruga, Mai Kiryû, Naoto Takenaka, Takuma Otoo, Masanobu Takashima, Matsuya Onoe"],
-    trailerUrl: "", 
-    watchUrl: "",
-    downloadUrl: ""
-  },
-  20: {
-    id: 20,
     title: "El conjuro 4: Últimos ritos",
     year: 2025,
     poster: "imagenes/conjuro4.jpg",
@@ -87,13 +86,260 @@ const moviesData = {
     audio: "Latino y Inglés subtitulada",
     director: "Michael Chaves",
     cast: ["Patrick Wilson, Vera Farmiga, Mia Tomlinson, Ben Hardy, Steve Coulter, Rebecca Calder, Elliot Cowan, Beau Gadsdon, Kíla Lord Cassidy, John Brotherton, Shannon Kook"],
-    trailerUrl: "", 
-    watchUrl: "",
-    downloadUrl: ""
+    trailerUrl: "https://www.youtube.com/watch?v=nXObaGjH4Pc", 
+    servers: {
+      online: [
+        { 
+          name: "Google Drive", 
+          url: "https://drive.google.com/file/d/1HMwdykEQSgpxBHBQKIGlomY3mesKV6pH/view?usp=sharing", 
+          quality: "1080p", 
+          audio: "Latino e Inglés",
+          type: "online"
+        },
+        { 
+          name: "Proximamente", 
+          url: "#", 
+          quality: "", 
+          audio: "",
+          type: ""
+        },
+        { 
+          name: "Proximamente", 
+          url: "#", 
+          quality: "", 
+          audio: "",
+          type: "online"
+        }
+      ],
+      download: [
+        { 
+          name: "Google Drive", 
+          url: "https://drive.google.com/file/d/1HMwdykEQSgpxBHBQKIGlomY3mesKV6pH/view?usp=sharing", 
+          quality: "1080p", 
+          size: "2.42 GB",
+          audio: "Latino e Inglés",
+          type: "download"
+        },
+        { 
+          name: "Proximamente", 
+          url: "", 
+          quality: "", 
+          size: "",
+          audio: "",
+          type: ""
+        },
+        { 
+          name: "Proximamente", 
+          url: "", 
+          quality: "", 
+          size: "",
+          audio: "",
+          type: ""
+        }
+      ]
+    }
+  },
+  22: {
+    id: 22,
+    title: "Jurassic World: El Renacer",
+    year: 2025,
+    poster: "imagenes/jurasic.jpg",
+    rating: 6.1,
+    quality: " Full HD Bluray",
+    description: "Cinco años después de los eventos de Jurassic World Dominion, la ecología del planeta resulta inhóspita para los dinosaurios. Los que quedan se mantienen en entornos ecuatoriales. Las tres criaturas más grandes en esta biosfera tropical tienen la clave para una droga que tiene increíbles beneficios para la humanidad.",
+    titles: "Jurassic World: El Renacer | Jurassic World: Renace | Jurassic World: Rebirth",
+    genres: ["Acción" , "Aventura" , "Ciencia ficción" , "Suspenso"],
+    audio: "Latino y Inglés subtitulada",
+    director: "Gareth Edwards",
+    cast: ["Scarlett Johansson, Mahershala Ali, Jonathan Bailey, Rupert Friend, Manuel Garcia-Rulfo, Luna Blaise, David Iacono, Audrina Miranda, Philippine Velge, Bechir Sylvain"],
+    trailerUrl: "https://www.youtube.com/watch?v=1R3LTANp7hw",
+    servers: {
+      online: [
+        { 
+          name: "Google Drive", 
+          url: "https://drive.google.com/file/d/14VmBzK8uXfwQnwZqnixWFr8L8dU8YbMk/view?usp=sharing", 
+          quality: "1080p", 
+          audio: "Latino e Inglés",
+          type: "online"
+        },
+        { 
+          name: "Proximamente", 
+          url: "#", 
+          quality: "", 
+          audio: "",
+          type: ""
+        },
+        { 
+          name: "Proximamente", 
+          url: "#", 
+          quality: "", 
+          audio: "",
+          type: "online"
+        }
+      ],
+      download: [
+        { 
+          name: "Google Drive", 
+          url: "https://drive.google.com/file/d/14VmBzK8uXfwQnwZqnixWFr8L8dU8YbMk/view?usp=sharing", 
+          quality: "1080p", 
+          size: "2.39 GB",
+          audio: "Latino e Inglés",
+          type: "download"
+        },
+        { 
+          name: "Proximamente", 
+          url: "", 
+          quality: "", 
+          size: "",
+          audio: "",
+          type: ""
+        },
+        { 
+          name: "Proximamente", 
+          url: "", 
+          quality: "", 
+          size: "",
+          audio: "",
+          type: ""
+        }
+      ]
+    }
+  },
+  21: {
+    id: 21,
+    title: "Capitán América: Un nuevo mundo",
+    year: 2025,
+    poster: "imagenes/captain-america.webp",
+    rating: 5.8, 
+    quality: "Full HD Bluray",
+    description: "Sam Wilson ha tomado oficialmente la responsabilidad de ser Capitán América. Después de reunirse con el recién elegido presidente de Estados Unidos, Sam se encuentra en medio de un incidente internacional. Debe descubrir la razón detrás de un nefasto plan antes de que la mente maestra tenga a todo el mundo viendo rojo.",
+    titles: "Capitán América: Un nuevo mundo | Captain America: Brave New World",
+    genres: ["Acción", "Aventura", "Ciencia ficción"],
+    audio: "Latino y Inglés subtitulada",
+    director: "Julius Onah",
+    cast: ["Anthony Mackie, Harrison Ford, Danny Ramirez, Shira Haas, Carl Lumbly, Tim Blake Nelson, Giancarlo Esposito, Liv Tyler, Xosha Roquemore"],
+    trailerUrl: "https://www.youtube.com/watch?v=RXoqRPP-y5c",
+    servers: {
+      online: [
+        { 
+          name: "Google Drive", 
+          url: "https://drive.google.com/file/d/1MbUMGn6IcmjmSktkoiqwOJvFNmKwGOOP/view?usp=sharing", 
+          quality: "1080p", 
+          audio: "Latino e Inglés",
+          type: "online"
+        },
+        { 
+          name: "Proximamente", 
+          url: "#", 
+          quality: "", 
+          audio: "",
+          type: ""
+        },
+        { 
+          name: "Proximamente", 
+          url: "#", 
+          quality: "", 
+          audio: "",
+          type: "online"
+        }
+      ],
+      download: [
+        { 
+          name: "Google Drive", 
+          url: "https://drive.google.com/file/d/1MbUMGn6IcmjmSktkoiqwOJvFNmKwGOOP/view?usp=sharing", 
+          quality: "1080p", 
+          size: "2.11 GB",
+          audio: "Latino e Inglés",
+          type: "download"
+        },
+        { 
+          name: "Proximamente", 
+          url: "", 
+          quality: "", 
+          size: "",
+          audio: "",
+          type: ""
+        },
+        { 
+          name: "Proximamente", 
+          url: "", 
+          quality: "", 
+          size: "",
+          audio: "",
+          type: ""
+        }
+      ]
+    }
+  },
+  20: {
+    id: 20,
+    title: "Estado eléctrico",
+    year: 2025,
+    poster: "imagenes/electric.jpg",
+    rating: 6.1, 
+    quality: "Full HD Bluray",
+    description: "Una adolescente huérfana vive en una sociedad donde los robots conscientes de caricaturas y mascotas, que una vez sirvieron en paz entre los humanos, ahora viven en el exilio tras una rebelión fallida. Pronto ella se embarca en un viaje con un misterioso robot para encontrar a su hermano perdido, juntándose con un contrabandista y su curioso compañero.",
+    titles: "Estado eléctrico | The Electric State",
+    genres: ["Acción", "Aventura"],
+    audio: "Latino y Inglés subtitulada",
+    director: "Anthony Russo, Joe Russo",
+    cast: ["Chris Pratt, Millie Bobby Brown, Woody Harrelson, Ke Huy Quan, Woody Norman, Ann Russo, Greg Cromer, Vince Pisani, Camrus Johnson, Juan Uribe Brandi"],
+    trailerUrl: "https://www.youtube.com/watch?v=9E6AP1jNzkc",
+    servers: {
+      online: [
+        { 
+          name: "Google Drive", 
+          url: "https://drive.google.com/file/d/14-MI-19QyY-KH8afw5dKQ6C_7MO8-MEL/view?usp=sharing", 
+          quality: "1080p", 
+          audio: "Latino e Inglés",
+          type: "online"
+        },
+        { 
+          name: "Proximamente", 
+          url: "#", 
+          quality: "", 
+          audio: "",
+          type: ""
+        },
+        { 
+          name: "Proximamente", 
+          url: "#", 
+          quality: "", 
+          audio: "",
+          type: "online"
+        }
+      ],
+      download: [
+        { 
+          name: "Google Drive", 
+          url: "https://drive.google.com/file/d/14-MI-19QyY-KH8afw5dKQ6C_7MO8-MEL/view?usp=sharing", 
+          quality: "1080p", 
+          size: "2.29 GB",
+          audio: "Latino e Inglés",
+          type: "download"
+        },
+        { 
+          name: "Proximamente", 
+          url: "", 
+          quality: "", 
+          size: "",
+          audio: "",
+          type: ""
+        },
+        { 
+          name: "Proximamente", 
+          url: "", 
+          quality: "", 
+          size: "",
+          audio: "",
+          type: ""
+        }
+      ]
+    }
   },
   19: {
     id: 19,
-    title: "Liga de la Justicia",
+    title: "La Liga de la Justicia de Zack Snyder",
     year: 2024,
     poster: "imagenes/ligadejusticia.webp",
     rating: 8.2,
@@ -104,15 +350,64 @@ const moviesData = {
     audio: "Latino e Inglés subtitulada",
     director: "Zack Snyder",
     cast: ["Ben Affleck, Henry Cavill, Amy Adams, Gal Gadot, Ray Fisher, Jason Momoa, Ezra Miller, Willem Dafoe, Jesse Eisenberg, Jeremy Irons, Diane Lane, Connie Nielsen"],
-    trailerUrl: "https://www.youtube.com/watch?v=1c66wfYbNEs",
-    watchUrl: "https://drive.google.com/file/d/1HWc738L7aPLMQ9XKzejn762boIhJmIyv/view?usp=sharing",
-    downloadUrl: "https://drive.google.com/file/d/1HWc738L7aPLMQ9XKzejn762boIhJmIyv/view?usp=sharing"
+    trailerUrl: "https://www.youtube.com/watch?v=L0dFRZu9Jxo",
+    servers: {
+      online: [
+        { 
+          name: "Google Drive", 
+          url: "https://drive.google.com/file/d/1HWc738L7aPLMQ9XKzejn762boIhJmIyv/view?usp=sharing", 
+          quality: "1080p", 
+          audio: "Latino e Inglés",
+          type: "online"
+        },
+        { 
+          name: "Proximamente", 
+          url: "#", 
+          quality: "", 
+          audio: "",
+          type: ""
+        },
+        { 
+          name: "Proximamente", 
+          url: "#", 
+          quality: "", 
+          audio: "",
+          type: "online"
+        }
+      ],
+      download: [
+        { 
+          name: "Google Drive", 
+          url: "https://drive.google.com/file/d/1HWc738L7aPLMQ9XKzejn762boIhJmIyv/view?usp=sharing", 
+          quality: "1080p", 
+          size: "3.88 GB",
+          audio: "Latino e Inglés",
+          type: "download"
+        },
+        { 
+          name: "Proximamente", 
+          url: "", 
+          quality: "", 
+          size: "",
+          audio: "",
+          type: ""
+        },
+        { 
+          name: "Proximamente", 
+          url: "", 
+          quality: "", 
+          size: "",
+          audio: "",
+          type: ""
+        }
+      ]
+    }
   },
   18: {
     id: 18,
     title: "Mufasa: El rey león",
     year: 2024,
-    poster: "imagenes/mufasa.jpg",
+    poster: "imagenes/mufasa.jpeg",
     rating: 6.7, 
     quality: " Full HD Bluray",
     description: "Mufasa, un cachorro de león perdido y solo, conoce a un comprensivo león llamado Taka, el heredero al linaje real. El encuentro fortuito pone en marcha un extenso viaje de un grupo de personajes en busca de su destino.",
@@ -121,9 +416,58 @@ const moviesData = {
     audio: "Latino y Inglés subtitulada",
     director: "Barry Jenkins",
     cast: ["Aaron Pierre, Kelvin Harrison Jr., Tiffany Boone, Kagiso Lediga, Preston Nyman, Blue Ivy Carter, John Kani, Mads Mikkelsen, Seth Rogen, Billy Eichner"],
-    trailerUrl: "",
-    watchUrl: "",
-    downloadUrl: ""
+    trailerUrl: "https://www.youtube.com/watch?v=glX5xo-E7WQ",
+    servers: {
+      online: [
+        { 
+          name: "Google Drive", 
+          url: "https://drive.google.com/file/d/1Hc0S86leQMt_lYmnk-1d7ArR_opWO-U_/view?usp=sharing", 
+          quality: "1080p", 
+          audio: "Latino e Inglés",
+          type: "online"
+        },
+        { 
+          name: "Proximamente", 
+          url: "#", 
+          quality: "", 
+          audio: "",
+          type: ""
+        },
+        { 
+          name: "Proximamente", 
+          url: "#", 
+          quality: "", 
+          audio: "",
+          type: "online"
+        }
+      ],
+      download: [
+        { 
+          name: "Google Drive", 
+          url: "https://drive.google.com/file/d/1Hc0S86leQMt_lYmnk-1d7ArR_opWO-U_/view?usp=sharing", 
+          quality: "1080p", 
+          size: "2.11 GB",
+          audio: "Latino e Inglés",
+          type: "download"
+        },
+        { 
+          name: "Proximamente", 
+          url: "", 
+          quality: "", 
+          size: "",
+          audio: "",
+          type: ""
+        },
+        { 
+          name: "Proximamente", 
+          url: "", 
+          quality: "", 
+          size: "",
+          audio: "",
+          type: ""
+        }
+      ]
+    }
   },
   17: {
     id: 17,
@@ -138,9 +482,58 @@ const moviesData = {
     audio: "Latino y Inglés subtitulada",
     director: "J.C. Chandor",
     cast: ["Aaron Taylor-Johnson, Ariana DeBose, Fred Hechinger, Alessandro Nivola, Christopher Abbott, Russell Crowe, Yuri Kolokolnikov, Levi Miller, Tom Reed"],
-    trailerUrl: "", 
-    watchUrl: "",
-    downloadUrl: ""
+    trailerUrl: "https://www.youtube.com/watch?v=JoWdhvrkKjo", 
+    servers: {
+      online: [
+        { 
+          name: "Google Drive", 
+          url: "", 
+          quality: "1080p", 
+          audio: "Latino e Inglés",
+          type: "online"
+        },
+        { 
+          name: "Proximamente", 
+          url: "#", 
+          quality: "", 
+          audio: "",
+          type: ""
+        },
+        { 
+          name: "Proximamente", 
+          url: "#", 
+          quality: "", 
+          audio: "",
+          type: "online"
+        }
+      ],
+      download: [
+        { 
+          name: "Google Drive", 
+          url: "", 
+          quality: "1080p", 
+          size: "2.26 GB",
+          audio: "Latino e Inglés",
+          type: "download"
+        },
+        { 
+          name: "Proximamente", 
+          url: "", 
+          quality: "", 
+          size: "",
+          audio: "",
+          type: ""
+        },
+        { 
+          name: "Proximamente", 
+          url: "", 
+          quality: "", 
+          size: "",
+          audio: "",
+          type: ""
+        }
+      ]
+    }
   },
   16: {
     id: 16,
@@ -155,9 +548,58 @@ const moviesData = {
     audio: "Latino y Inglés subtitulada",
     director: "F. Gary Gray",
     cast: ["Kevin Hart, Gugu Mbatha-Raw, Sam Worthington, Vincent D'Onofrio, Úrsula Corberó, Billy Magnussen, Yun Jee Kim, Viveik Kalra, Jean Reno, Jacob Batalon"],
-    trailerUrl: "", 
-    watchUrl: "",
-    downloadUrl: ""
+    trailerUrl: "https://www.youtube.com/watch?v=rQ6s1mjNJGc", 
+    servers: {
+      online: [
+        { 
+          name: "Google Drive", 
+          url: "https://drive.google.com/file/d/1mfCzOpY2czpd8m1y1WltilBC0h76YrYE/view?usp=sharing", 
+          quality: "1080p", 
+          audio: "Latino e Inglés",
+          type: "online"
+        },
+        { 
+          name: "Proximamente", 
+          url: "#", 
+          quality: "", 
+          audio: "",
+          type: ""
+        },
+        { 
+          name: "Proximamente", 
+          url: "#", 
+          quality: "", 
+          audio: "",
+          type: "online"
+        }
+      ],
+      download: [
+        { 
+          name: "Google Drive", 
+          url: "https://drive.google.com/file/d/1mfCzOpY2czpd8m1y1WltilBC0h76YrYE/view?usp=sharing", 
+          quality: "1080p", 
+          size: "1.9 GB",
+          audio: "Latino e Inglés",
+          type: "download"
+        },
+        { 
+          name: "Proximamente", 
+          url: "", 
+          quality: "", 
+          size: "",
+          audio: "",
+          type: ""
+        },
+        { 
+          name: "Proximamente", 
+          url: "", 
+          quality: "", 
+          size: "",
+          audio: "",
+          type: ""
+        }
+      ]
+    }
   },
   15: {
     id: 15,
@@ -172,9 +614,58 @@ const moviesData = {
     audio: "Latino y Inglés subtitulada",
     director: "Adil El Arbi, Bilall Fallah",
     cast: ["Will Smith, Martin Lawrence, Vanessa Hudgens, Alexander Ludwig, Paola Núñez, Eric Dane, Ioan Gruffudd, Jacob Scipio, Melanie Liburd, Tasha Smith"],
-    trailerUrl: "", 
-    watchUrl: "",
-    downloadUrl: ""
+    trailerUrl: "https://www.youtube.com/watch?v=LOZqqEXURzg", 
+    servers: {
+      online: [
+        { 
+          name: "Google Drive", 
+          url: "", 
+          quality: "1080p", 
+          audio: "Latino e Inglés",
+          type: "online"
+        },
+        { 
+          name: "Proximamente", 
+          url: "#", 
+          quality: "", 
+          audio: "",
+          type: ""
+        },
+        { 
+          name: "Proximamente", 
+          url: "#", 
+          quality: "", 
+          audio: "",
+          type: "online"
+        }
+      ],
+      download: [
+        { 
+          name: "Google Drive", 
+          url: "", 
+          quality: "1080p", 
+          size: "2.7 GB",
+          audio: "Latino e Inglés",
+          type: "download"
+        },
+        { 
+          name: "Proximamente", 
+          url: "", 
+          quality: "", 
+          size: "",
+          audio: "",
+          type: ""
+        },
+        { 
+          name: "Proximamente", 
+          url: "", 
+          quality: "", 
+          size: "",
+          audio: "",
+          type: ""
+        }
+      ]
+    }
   },
   14: {
     id: 14,
@@ -189,9 +680,58 @@ const moviesData = {
     audio: "Latino y Inglés subtitulada",
     director: "Christopher Nolan",
     cast: ["Cillian Murphy, Emily Blunt, Matt Damon, Robert Downey Jr., Alden Ehrenreich, Scott Grimes, Jason Clarke, Kurt Koehler, Tony Goldwyn, John Gowans, Macon Blair"],
-    trailerUrl: "",
-    watchUrl: "",
-    downloadUrl: ""
+    trailerUrl: "https://www.youtube.com/watch?v=gMPEbJQun68",
+    servers: {
+      online: [
+        { 
+          name: "Google Drive", 
+          url: "https://drive.google.com/file/d/12lvMeJkChEinC3iw9oz9MTy2VFZOPb37/view?usp=sharing", 
+          quality: "1080p", 
+          audio: "Latino e Inglés",
+          type: "online"
+        },
+        { 
+          name: "Proximamente", 
+          url: "#", 
+          quality: "", 
+          audio: "",
+          type: ""
+        },
+        { 
+          name: "Proximamente", 
+          url: "#", 
+          quality: "", 
+          audio: "",
+          type: "online"
+        }
+      ],
+      download: [
+        { 
+          name: "Google Drive", 
+          url: "https://drive.google.com/file/d/12lvMeJkChEinC3iw9oz9MTy2VFZOPb37/view?usp=sharing", 
+          quality: "1080p", 
+          size: "3.21 GB",
+          audio: "Latino e Inglés",
+          type: "download"
+        },
+        { 
+          name: "Proximamente", 
+          url: "", 
+          quality: "", 
+          size: "",
+          audio: "",
+          type: ""
+        },
+        { 
+          name: "Proximamente", 
+          url: "", 
+          quality: "", 
+          size: "",
+          audio: "",
+          type: ""
+        }
+      ]
+    }
   },
   13: {
     id: 13,
@@ -206,13 +746,62 @@ const moviesData = {
     audio: "Latino y Inglés subtitulada",
     director: "Ben Wheatley",
     cast: ["Jason Statham, Bingbing Li, Rainn Wilson, Cliff Curtis, Winston Chao, Shuya Sophia Cai, Ruby Rose, Page Kennedy, Robert Taylor, Ólafur Darri Ólafsson, Masi Oka"],
-    trailerUrl: "https://www.youtube.com/watch?v=7wuK5PhzcNY",
-    watchUrl: "https://drive.google.com/file/d/1IRY3czDp_PVPLbuTRIyzs8RnTVNz_r05/view?usp=sharing",
-    downloadUrl: "https://drive.google.com/file/d/1IRY3czDp_PVPLbuTRIyzs8RnTVNz_r05/view?usp=sharing"
+    trailerUrl: "https://www.youtube.com/watch?v=C1FmYERF0pk",
+    servers: {
+      online: [
+        { 
+          name: "Google Drive", 
+          url: "https://drive.google.com/file/d/1IRY3czDp_PVPLbuTRIyzs8RnTVNz_r05/view?usp=sharing", 
+          quality: "1080p", 
+          audio: "Latino e Inglés",
+          type: "online"
+        },
+        { 
+          name: "Proximamente", 
+          url: "#", 
+          quality: "", 
+          audio: "",
+          type: ""
+        },
+        { 
+          name: "Proximamente", 
+          url: "#", 
+          quality: "", 
+          audio: "",
+          type: "online"
+        }
+      ],
+      download: [
+        { 
+          name: "Google Drive", 
+          url: "https://drive.google.com/file/d/1IRY3czDp_PVPLbuTRIyzs8RnTVNz_r05/view?usp=sharing", 
+          quality: "1080p", 
+          size: "2.07 GB",
+          audio: "Latino e Inglés",
+          type: "download"
+        },
+        { 
+          name: "Proximamente", 
+          url: "", 
+          quality: "", 
+          size: "",
+          audio: "",
+          type: ""
+        },
+        { 
+          name: "Proximamente", 
+          url: "", 
+          quality: "", 
+          size: "",
+          audio: "",
+          type: ""
+        }
+      ]
+    }
   },
   12: {
     id: 12,
-    title: "Indiana Jones y el llamado del destino",
+    title: "Indiana Jones 5 Y El Dial Del Destino",
     year: 2023,
     poster: "imagenes/indiana jones.webp",
     rating: 5.9,
@@ -223,9 +812,58 @@ const moviesData = {
     audio: "Latino y Inglés subtitulada",
     director: "James Mangold",
     cast: ["Harrison Ford, Phoebe Waller-Bridge, Mads Mikkelsen"],
-    trailerUrl: "",
-    watchUrl: "",
-    downloadUrl: ""
+    trailerUrl: "https://www.youtube.com/watch?v=LgaoAKUWa7E",
+    servers: {
+      online: [
+        { 
+          name: "Google Drive", 
+          url: "https://drive.google.com/file/d/1ujEWSEopq-ktSUUnKD_KXlgUIHKuGpV_/view?usp=sharing", 
+          quality: "1080p", 
+          audio: "Latino e Inglés",
+          type: "online"
+        },
+        { 
+          name: "Proximamente", 
+          url: "#", 
+          quality: "", 
+          audio: "",
+          type: ""
+        },
+        { 
+          name: "Proximamente", 
+          url: "#", 
+          quality: "", 
+          audio: "",
+          type: "online"
+        }
+      ],
+      download: [
+        { 
+          name: "Google Drive", 
+          url: "https://drive.google.com/file/d/1ujEWSEopq-ktSUUnKD_KXlgUIHKuGpV_/view?usp=sharing", 
+          quality: "1080p", 
+          size: "2.5 GB",
+          audio: "Latino e Inglés",
+          type: "download"
+        },
+        { 
+          name: "Proximamente", 
+          url: "", 
+          quality: "", 
+          size: "",
+          audio: "",
+          type: ""
+        },
+        { 
+          name: "Proximamente", 
+          url: "", 
+          quality: "", 
+          size: "",
+          audio: "",
+          type: ""
+        }
+      ]
+    }
   },
   11: {
     id: 11,
@@ -460,6 +1098,7 @@ function loadMovieDetails() {
   setupMovieLinks(movie);
 }
 
+
 function createStarRating(rating) {
   const starsContainer = document.getElementById('movie-stars');
   const ratingText = document.getElementById('movie-rating');
@@ -486,7 +1125,7 @@ function createStarRating(rating) {
   }
   
   starsContainer.innerHTML = starsHTML;
-  ratingText.textContent = `${rating}/10 de 34K votos`;
+  ratingText.textContent = `${rating}/10`;
 }
 
 function createGenreTags(genres) {
@@ -559,73 +1198,203 @@ function createCastList(cast) {
   castContainer.innerHTML = castHTML;
 }
 
-/*
- 
-const genresContainer = document.getElementById('movie-genres');
-  const genreTags = genres.map(genre => 
-    `<a class="genre-tag" href="/peliculas?genero=${encodeURIComponent(genre)}">${genre}</a>`
-  ).join('');
-  
-  genresContainer.innerHTML = genreTags;
+// Variables globales
+let watchTrailerBtn, watchOnlineBtn, downloadBtn, trailerContainer, onlineContainer, downloadContainer, videoOverlay, closeOverlay;
 
-  --
+// Datos de servidores de descarga
+const downloadServers = [
+  { name: "MEGA", url: "#", quality: "1080p", size: "2.5 GB" },
+  { name: "Google Drive", url: "#", quality: "720p", size: "1.8 GB" },
+  { name: "MediaFire", url: "#", quality: "1080p", size: "2.3 GB" },
+  { name: "Torrent", url: "#", quality: "4K", size: "4.1 GB" }
+];
 
-  const castContainer = document.getElementById('movie-cast');
-  // Si cast es string, convertirlo a array
-  const castArray = Array.isArray(cast) ? cast : cast.split(',').map(a => a.trim());
+// Función para inicializar elementos del DOM
+function initializeContainers() {
+  // Inicializar elementos
+  watchTrailerBtn = document.getElementById('watch-trailer-btn');
+  watchOnlineBtn = document.getElementById('watch-online-btn');
+  downloadBtn = document.getElementById('download-btn');
   
-  // Tomar solo los primeros 3 actores para no hacer muy largo el listado
-  const mainCast = castArray.slice(0, 3);
-  
-  const castHTML = mainCast.map(actor =>
-    `<a class="cast-member" href="categorias.html?search=${encodeURIComponent(actor)}">${actor}</a>`
-  ).join(', ');
-  
-  // Agregar "y más..." si hay más actores
-  if (castArray.length > 3) {
-    castContainer.innerHTML = castHTML + ` y <a href="categorias.html?search=${encodeURIComponent(castArray[0].split(' ')[0])}">más...</a>`;
-  } else {
-    castContainer.innerHTML = castHTML;
+  // CORRECCIÓN: Inicializar downloadContainer correctamente
+  downloadContainer = document.getElementById('download-container');
+
+  // Configurar event listeners
+  if (watchTrailerBtn) {
+    watchTrailerBtn.addEventListener('click', showTrailer);
   }
-
-*/
-
-function setupMovieLinks(movie) {
-  // Guardar las URLs en los botones para uso posterior
-  document.getElementById('trailer-btn').dataset.url = movie.trailerUrl;
-  document.getElementById('watch-online-btn').dataset.url = movie.watchUrl;
-  document.getElementById('download-btn').dataset.url = movie.downloadUrl;
+  
+  if (watchOnlineBtn) {
+    watchOnlineBtn.addEventListener('click', showOnline);
+  }
+  
+  if (downloadBtn) {
+    downloadBtn.addEventListener('click', showDownloads);
+  }
 }
 
+// Función para mostrar trailer
+function showTrailer() {
+  const currentMovie = getCurrentMovie();
+  console.log('Trailer URL:', currentMovie?.trailerUrl);
+  
+  if (!currentMovie || !currentMovie.trailerUrl) {
+    alert('Trailer no disponible');
+    return;
+  }
+
+  // Ocultar otros contenedores
+  hideAllContainers();
+  
+  // Convertir URL a embed
+  const embedUrl = convertToEmbedUrl(currentMovie.trailerUrl);
+  
+  // Cargar trailer en la sección principal (arriba)
+  const mainTrailerPlayer = document.getElementById('main-trailer-player');
+  if (mainTrailerPlayer) {
+    mainTrailerPlayer.innerHTML = `
+      <iframe 
+        src="${embedUrl}" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+      </iframe>
+    `;
+  }
+
+   // Mostrar la sección del trailer (arriba)
+  const trailerSection = document.getElementById('movie-trailer');
+  if (trailerSection) {
+    trailerSection.classList.remove('hidden');
+    
+    // Desplazar la página hacia el trailer
+    trailerSection.scrollIntoView({ behavior: 'smooth' });
+  }
+}
+
+
+// Función para mostrar ver online (con servidores)
+function showOnline() {
+  const currentMovie = getCurrentMovie();
+  
+  if (!currentMovie || !currentMovie.servers || currentMovie.servers.online.length === 0) {
+    alert('Ver online no disponible para esta película');
+    return;
+  }
+
+  // Ocultar otros contenedores
+  hideAllContainers();
+  
+  // Cargar servidores para ver online específicos de la película
+  const serversList = document.querySelector('#online-container .servers-list');
+  if (serversList) {
+    serversList.innerHTML = currentMovie.servers.online.map(server => `
+      <div class="server-item">
+        <a href="${server.url}" class="server-link" target="_blank">
+          ${server.name} - ${server.quality}
+        </a>
+        <div class="server-info">
+          <div class="server-quality">Calidad: ${server.quality}</div>
+          <div class="server-audio">Audio: ${server.audio}</div>
+          ${server.size ? `<div>Tamaño: ${server.size}</div>` : ''}
+        </div>
+      </div>
+    `).join('');
+  }
+  
+  // Mostrar contenedor
+  const onlineContainer = document.getElementById('online-container');
+  if (onlineContainer) {
+    onlineContainer.classList.remove('hidden');
+  }
+}
+
+// Función para mostrar descargas
+function showDownloads() {
+  const currentMovie = getCurrentMovie();
+  
+  if (!currentMovie || !currentMovie.servers || currentMovie.servers.download.length === 0) {
+    alert('Descargas no disponibles para esta película');
+    return;
+  }
+
+  // Ocultar otros contenedores
+  hideAllContainers();
+  
+  // Cargar servidores de descarga específicos de la película
+  const serversList = document.querySelector('#download-container .servers-list');
+  if (serversList) {
+    serversList.innerHTML = currentMovie.servers.download.map(server => `
+      <div class="server-item">
+        <a href="${server.url}" class="server-link download-link" target="_blank">
+          ${server.name}
+        </a>
+        <div class="server-info">
+          <div class="server-quality">Calidad: ${server.quality}</div>
+          <div class="server-audio">Audio: ${server.audio}</div>
+          <div>Tamaño: ${server.size}</div>
+        </div>
+      </div>
+    `).join('');
+  }
+  
+  // Mostrar contenedor
+  if (downloadContainer) {
+    downloadContainer.classList.remove('hidden');
+  }
+}
+
+// Función para ocultar todos los contenedores
+function hideAllContainers() {
+  const trailerSection = document.getElementById('movie-trailer');
+  const onlineContainer = document.getElementById('online-container');
+  const downloadContainer = document.getElementById('download-container');
+  
+  if (trailerSection) trailerSection.classList.add('hidden');
+  if (onlineContainer) onlineContainer.classList.add('hidden');
+  if (downloadContainer) downloadContainer.classList.add('hidden');
+}
+
+// Función para expandir video
+function expandVideo(target) {
+  const sourceIframe = document.querySelector(`#${target}-player iframe`);
+  if (!sourceIframe) return;
+  
+  const expandedVideo = document.getElementById('expanded-video');
+  if (expandedVideo) {
+    expandedVideo.innerHTML = sourceIframe.outerHTML;
+  }
+  
+  if (videoOverlay) {
+    videoOverlay.classList.remove('hidden');
+  }
+}
+
+// Función para convertir URL a embed
+function convertToEmbedUrl(url) {
+  if (url.includes('youtube.com/watch?v=')) {
+    const videoId = url.split('v=')[1].split('&')[0];
+    return `https://www.youtube.com/embed/${videoId}`;
+  } else if (url.includes('youtu.be/')) {
+    const videoId = url.split('youtu.be/')[1];
+    return `https://www.youtube.com/embed/${videoId}`;
+  }
+  return url;
+}
+
+// Función para obtener película actual
+function getCurrentMovie() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const movieId = urlParams.get('id');
+  return moviesData[movieId];
+}
+
+// Función para configurar enlaces de película (mantener por compatibilidad)
+function setupMovieLinks(movie) {
+  // Esta función puede usarse para configurar enlaces directos si es necesario
+}
+
+// Función para configurar botones de acción (mantener por compatibilidad)
 function setupActionButtons() {
-  const trailerBtn = document.getElementById('trailer-btn');
-  const watchBtn = document.getElementById('watch-online-btn');
-  const downloadBtn = document.getElementById('download-btn');
-  
-  trailerBtn.addEventListener('click', function() {
-    const url = this.dataset.url;
-    if (url && url !== 'https://www.youtube.com/watch?v=example1') {
-      window.open(url, '_blank');
-    } else {
-      alert('Trailer no disponible en este momento');
-    }
-  });
-  
-  watchBtn.addEventListener('click', function() {
-    const url = this.dataset.url;
-    if (url && url !== 'https://example.com/watch/1') {
-      window.open(url, '_blank');
-    } else {
-      alert('Enlace de visualización no disponible en este momento');
-    }
-  });
-  
-  downloadBtn.addEventListener('click', function() {
-    const url = this.dataset.url;
-    if (url && url !== 'https://example.com/download/1') {
-      window.open(url, '_blank');
-    } else {
-      alert('Enlace de descarga no disponible en este momento');
-    }
-  });
+  // Los event listeners ya están configurados en initializeContainers()
 }
