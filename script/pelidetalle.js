@@ -1,11 +1,10 @@
-// Movie Details JavaScript
+
 document.addEventListener('DOMContentLoaded', function() {
   loadMovieDetails();
   setupActionButtons();
   initializeContainers(); 
 });
 
-// Datos extendidos de películas con toda la información
 const moviesData = {
   24: {
     id: 24,
@@ -25,7 +24,7 @@ const moviesData = {
       online: [
         { 
           name: "Google Drive", 
-          url: "", 
+          url: "https://drive.google.com/file/d/1nc7FtkuEvU-LBj8WgWxW7J4noEXrX-Vx/view?usp=sharing", 
           quality: "1080p", 
           audio: "Latino e Inglés",
           type: "online"
@@ -48,9 +47,9 @@ const moviesData = {
       download: [
         { 
           name: "Google Drive", 
-          url: "", 
+          url: "https://drive.google.com/file/d/1nc7FtkuEvU-LBj8WgWxW7J4noEXrX-Vx/view?usp=sharing", 
           quality: "1080p", 
-          size: " GB",
+          size: "2.04 GB",
           audio: "Latino e Inglés",
           type: "download"
         },
@@ -487,7 +486,7 @@ const moviesData = {
       online: [
         { 
           name: "Google Drive", 
-          url: "", 
+          url: "https://drive.google.com/file/d/1jaxy2T45T7uv0u-_jSzyPm3M0Ej6OuLg/view?usp=sharing", 
           quality: "1080p", 
           audio: "Latino e Inglés",
           type: "online"
@@ -510,7 +509,7 @@ const moviesData = {
       download: [
         { 
           name: "Google Drive", 
-          url: "", 
+          url: "https://drive.google.com/file/d/1jaxy2T45T7uv0u-_jSzyPm3M0Ej6OuLg/view?usp=sharing", 
           quality: "1080p", 
           size: "2.26 GB",
           audio: "Latino e Inglés",
@@ -879,8 +878,57 @@ const moviesData = {
     director: "André Øvredal",
     cast: ["Corey Hawkins, Aisling Franciosi, Liam Cunningham, David Dastmalchian, Chris Walley, Jon Jon Briones, Stefan Kapicic, Martin Furulund, Nikolai Nikolaeff"],
     trailerUrl: "",
-    watchUrl: "",
-    downloadUrl: ""
+    servers: {
+      online: [
+        { 
+          name: "Google Drive", 
+          url: "", 
+          quality: "1080p", 
+          audio: "Latino e Inglés",
+          type: "online"
+        },
+        { 
+          name: "Proximamente", 
+          url: "#", 
+          quality: "", 
+          audio: "",
+          type: ""
+        },
+        { 
+          name: "Proximamente", 
+          url: "#", 
+          quality: "", 
+          audio: "",
+          type: "online"
+        }
+      ],
+      download: [
+        { 
+          name: "Google Drive", 
+          url: "", 
+          quality: "1080p", 
+          size: " GB",
+          audio: "Latino e Inglés",
+          type: "download"
+        },
+        { 
+          name: "Proximamente", 
+          url: "", 
+          quality: "", 
+          size: "",
+          audio: "",
+          type: ""
+        },
+        { 
+          name: "Proximamente", 
+          url: "", 
+          quality: "", 
+          size: "",
+          audio: "",
+          type: ""
+        }
+      ]
+    }
   },
   10: {
     id: 10,
@@ -896,8 +944,57 @@ const moviesData = {
     director: "Christopher McQuarries",
     cast: ["Tom Cruise, Hayley Atwell, Ving Rhames, Simon Pegg, Rebecca Ferguson, Vanessa Kirby, Esai Morales, Pom Klementieff, Henry Czerny, Shea Whigham"],
     trailerUrl: "",
-    watchUrl: "",
-    downloadUrl: ""
+    servers: {
+      online: [
+        { 
+          name: "Google Drive", 
+          url: "", 
+          quality: "1080p", 
+          audio: "Latino e Inglés",
+          type: "online"
+        },
+        { 
+          name: "Proximamente", 
+          url: "#", 
+          quality: "", 
+          audio: "",
+          type: ""
+        },
+        { 
+          name: "Proximamente", 
+          url: "#", 
+          quality: "", 
+          audio: "",
+          type: "online"
+        }
+      ],
+      download: [
+        { 
+          name: "Google Drive", 
+          url: "", 
+          quality: "1080p", 
+          size: " GB",
+          audio: "Latino e Inglés",
+          type: "download"
+        },
+        { 
+          name: "Proximamente", 
+          url: "", 
+          quality: "", 
+          size: "",
+          audio: "",
+          type: ""
+        },
+        { 
+          name: "Proximamente", 
+          url: "", 
+          quality: "", 
+          size: "",
+          audio: "",
+          type: ""
+        }
+      ]
+    }
   },
   9: {
     id: 9,
@@ -913,8 +1010,57 @@ const moviesData = {
     director: "Art Camacho",
     cast: ["Dermot Mulroney, Jeff Fahey, Mauricio Mendoza, Kesia Elwin, Tonantzin Esparza, Melissa Diaz, Texas Battle, Manu Intiraymi, Hani Al Naimi, Peter Nikkos"],
     trailerUrl: "",
-    watchUrl: "",
-    downloadUrl: ""
+    servers: {
+      online: [
+        { 
+          name: "Google Drive", 
+          url: "", 
+          quality: "1080p", 
+          audio: "Latino e Inglés",
+          type: "online"
+        },
+        { 
+          name: "Proximamente", 
+          url: "#", 
+          quality: "", 
+          audio: "",
+          type: ""
+        },
+        { 
+          name: "Proximamente", 
+          url: "#", 
+          quality: "", 
+          audio: "",
+          type: "online"
+        }
+      ],
+      download: [
+        { 
+          name: "Google Drive", 
+          url: "", 
+          quality: "1080p", 
+          size: " GB",
+          audio: "Latino e Inglés",
+          type: "download"
+        },
+        { 
+          name: "Proximamente", 
+          url: "", 
+          quality: "", 
+          size: "",
+          audio: "",
+          type: ""
+        },
+        { 
+          name: "Proximamente", 
+          url: "", 
+          quality: "", 
+          size: "",
+          audio: "",
+          type: ""
+        }
+      ]
+    }
   },
   8: {
     id: 8,
@@ -930,8 +1076,57 @@ const moviesData = {
     director: "Ryan Coogler",
     cast: ["Michael B. Jordan, Miles Caton, Saul Williams, Andrene Ward-Hammond, Jack O'Connell, Tenaj L. Jackson, Dave Maldonado, Aadyn Encalarde, Helena Hu, Yao"],
     trailerUrl: "",
-    watchUrl: "",
-    downloadUrl: ""
+    servers: {
+      online: [
+        { 
+          name: "Google Drive", 
+          url: "", 
+          quality: "1080p", 
+          audio: "Latino e Inglés",
+          type: "online"
+        },
+        { 
+          name: "Proximamente", 
+          url: "#", 
+          quality: "", 
+          audio: "",
+          type: ""
+        },
+        { 
+          name: "Proximamente", 
+          url: "#", 
+          quality: "", 
+          audio: "",
+          type: "online"
+        }
+      ],
+      download: [
+        { 
+          name: "Google Drive", 
+          url: "", 
+          quality: "1080p", 
+          size: " GB",
+          audio: "Latino e Inglés",
+          type: "download"
+        },
+        { 
+          name: "Proximamente", 
+          url: "", 
+          quality: "", 
+          size: "",
+          audio: "",
+          type: ""
+        },
+        { 
+          name: "Proximamente", 
+          url: "", 
+          quality: "", 
+          size: "",
+          audio: "",
+          type: ""
+        }
+      ]
+    }
   },
   7: {
     id: 7,
@@ -947,8 +1142,57 @@ const moviesData = {
     director: "Michael Mann",
     cast: ["Adam Driver, Shailene Woodley, Giuseppe Festinese, Alessandro Cremona, Derek Hill, Leonardo Caimi, Penélope Cruz, Gabriel Leone, Michele Savoia, Jacopo Bruno"],
     trailerUrl: "", 
-    watchUrl: "",
-    downloadUrl: ""
+    servers: {
+      online: [
+        { 
+          name: "Google Drive", 
+          url: "", 
+          quality: "1080p", 
+          audio: "Latino e Inglés",
+          type: "online"
+        },
+        { 
+          name: "Proximamente", 
+          url: "#", 
+          quality: "", 
+          audio: "",
+          type: ""
+        },
+        { 
+          name: "Proximamente", 
+          url: "#", 
+          quality: "", 
+          audio: "",
+          type: "online"
+        }
+      ],
+      download: [
+        { 
+          name: "Google Drive", 
+          url: "", 
+          quality: "1080p", 
+          size: " GB",
+          audio: "Latino e Inglés",
+          type: "download"
+        },
+        { 
+          name: "Proximamente", 
+          url: "", 
+          quality: "", 
+          size: "",
+          audio: "",
+          type: ""
+        },
+        { 
+          name: "Proximamente", 
+          url: "", 
+          quality: "", 
+          size: "",
+          audio: "",
+          type: ""
+        }
+      ]
+    }
   },
   6: {
     id: 6,
@@ -964,8 +1208,57 @@ const moviesData = {
     director: "David Gordon Green",
     cast: ["Jamie Lee Curtis, Andi Matichak, James Jude Courtney, Rohan Campbell, Will Patton, Jesse C. Boyd, Michael Barbieri, Destiny Moné, Joey Harris, Marteen"],
     trailerUrl: "", 
-    watchUrl: "",
-    downloadUrl: ""
+    servers: {
+      online: [
+        { 
+          name: "Google Drive", 
+          url: "", 
+          quality: "1080p", 
+          audio: "Latino e Inglés",
+          type: "online"
+        },
+        { 
+          name: "Proximamente", 
+          url: "#", 
+          quality: "", 
+          audio: "",
+          type: ""
+        },
+        { 
+          name: "Proximamente", 
+          url: "#", 
+          quality: "", 
+          audio: "",
+          type: "online"
+        }
+      ],
+      download: [
+        { 
+          name: "Google Drive", 
+          url: "", 
+          quality: "1080p", 
+          size: " GB",
+          audio: "Latino e Inglés",
+          type: "download"
+        },
+        { 
+          name: "Proximamente", 
+          url: "", 
+          quality: "", 
+          size: "",
+          audio: "",
+          type: ""
+        },
+        { 
+          name: "Proximamente", 
+          url: "", 
+          quality: "", 
+          size: "",
+          audio: "",
+          type: ""
+        }
+      ]
+    }
   },
   5: {
     id: 5,
@@ -981,8 +1274,57 @@ const moviesData = {
     director: "David Leitch",
     cast: ["Brad Pitt, Joey King, Aaron Taylor-Johnson, Brian Tyree Henry, Andrew Koji, Hiroyuki Sanada, Michael Shannon, Sandra Bullock, Bad Bunny, Logan Lerman"],
     trailerUrl: "", 
-    watchUrl: "",
-    downloadUrl: ""
+    servers: {
+      online: [
+        { 
+          name: "Google Drive", 
+          url: "", 
+          quality: "1080p", 
+          audio: "Latino e Inglés",
+          type: "online"
+        },
+        { 
+          name: "Proximamente", 
+          url: "#", 
+          quality: "", 
+          audio: "",
+          type: ""
+        },
+        { 
+          name: "Proximamente", 
+          url: "#", 
+          quality: "", 
+          audio: "",
+          type: "online"
+        }
+      ],
+      download: [
+        { 
+          name: "Google Drive", 
+          url: "", 
+          quality: "1080p", 
+          size: " GB",
+          audio: "Latino e Inglés",
+          type: "download"
+        },
+        { 
+          name: "Proximamente", 
+          url: "", 
+          quality: "", 
+          size: "",
+          audio: "",
+          type: ""
+        },
+        { 
+          name: "Proximamente", 
+          url: "", 
+          quality: "", 
+          size: "",
+          audio: "",
+          type: ""
+        }
+      ]
+    }
   },
   4: {
     id: 4,
@@ -998,8 +1340,57 @@ const moviesData = {
     director: "J.J. Perry",
     cast: ["Jamie Foxx, Dave Franco, Natasha Liu Bordizzo, Meagan Good, Karla Souza, Steve Howey, Scott Adkins, Oliver Masucci, Snoop Dogg, Eric Lange, Peter Stormare"],
     trailerUrl: "", 
-    watchUrl: "",
-    downloadUrl: ""
+    servers: {
+      online: [
+        { 
+          name: "Google Drive", 
+          url: "", 
+          quality: "1080p", 
+          audio: "Latino e Inglés",
+          type: "online"
+        },
+        { 
+          name: "Proximamente", 
+          url: "#", 
+          quality: "", 
+          audio: "",
+          type: ""
+        },
+        { 
+          name: "Proximamente", 
+          url: "#", 
+          quality: "", 
+          audio: "",
+          type: "online"
+        }
+      ],
+      download: [
+        { 
+          name: "Google Drive", 
+          url: "", 
+          quality: "1080p", 
+          size: " GB",
+          audio: "Latino e Inglés",
+          type: "download"
+        },
+        { 
+          name: "Proximamente", 
+          url: "", 
+          quality: "", 
+          size: "",
+          audio: "",
+          type: ""
+        },
+        { 
+          name: "Proximamente", 
+          url: "", 
+          quality: "", 
+          size: "",
+          audio: "",
+          type: ""
+        }
+      ]
+    }
   },
   3: {
     id: 3,
@@ -1015,8 +1406,57 @@ const moviesData = {
     director: "Martin Campbell",
     cast: ["Liam Neeson, Guy Pearce, Taj Atwal, Harold Torres, Ray Fearon, Monica Bellucci, Ray Stevenson, Mia Sanchez, Daniel De Bourg, Natalie Anderson, Rebecca Calder"],
     trailerUrl: "", 
-    watchUrl: "",
-    downloadUrl: ""
+    servers: {
+      online: [
+        { 
+          name: "Google Drive", 
+          url: "", 
+          quality: "1080p", 
+          audio: "Latino e Inglés",
+          type: "online"
+        },
+        { 
+          name: "Proximamente", 
+          url: "#", 
+          quality: "", 
+          audio: "",
+          type: ""
+        },
+        { 
+          name: "Proximamente", 
+          url: "#", 
+          quality: "", 
+          audio: "",
+          type: "online"
+        }
+      ],
+      download: [
+        { 
+          name: "Google Drive", 
+          url: "", 
+          quality: "1080p", 
+          size: " GB",
+          audio: "Latino e Inglés",
+          type: "download"
+        },
+        { 
+          name: "Proximamente", 
+          url: "", 
+          quality: "", 
+          size: "",
+          audio: "",
+          type: ""
+        },
+        { 
+          name: "Proximamente", 
+          url: "", 
+          quality: "", 
+          size: "",
+          audio: "",
+          type: ""
+        }
+      ]
+    }
   },
   2: {
     id: 2,
@@ -1032,8 +1472,57 @@ const moviesData = {
     director: "Dan Trachtenberg",
     cast: ["Amber Midthunder, Dakota Beavers, Dane DiLiegro, Stormee Kipp, Michelle Thrush, Julian Black Antelope, Stefany Mathias, Bennett Taylor, Mike Paterson"],
     trailerUrl: "", 
-    watchUrl: "",
-    downloadUrl: ""
+    servers: {
+      online: [
+        { 
+          name: "Google Drive", 
+          url: "https://drive.google.com/file/d/1yALApzvsXDllPtZZKayaJmcjvYrH1wCl/view?usp=sharing", 
+          quality: "1080p", 
+          audio: "Latino e Inglés",
+          type: "online"
+        },
+        { 
+          name: "Proximamente", 
+          url: "#", 
+          quality: "", 
+          audio: "",
+          type: ""
+        },
+        { 
+          name: "Proximamente", 
+          url: "#", 
+          quality: "", 
+          audio: "",
+          type: "online"
+        }
+      ],
+      download: [
+        { 
+          name: "Google Drive", 
+          url: "https://drive.google.com/file/d/1yALApzvsXDllPtZZKayaJmcjvYrH1wCl/view?usp=sharing", 
+          quality: "1080p", 
+          size: "1.96 GB",
+          audio: "Latino e Inglés",
+          type: "download"
+        },
+        { 
+          name: "Proximamente", 
+          url: "", 
+          quality: "", 
+          size: "",
+          audio: "",
+          type: ""
+        },
+        { 
+          name: "Proximamente", 
+          url: "", 
+          quality: "", 
+          size: "",
+          audio: "",
+          type: ""
+        }
+      ]
+    }
   },
   1: {
     id: 1,
@@ -1049,8 +1538,57 @@ const moviesData = {
     director: "Justin Lin",
     cast: ["Vin Diesel, Michelle Rodriguez, Jordana Brewster, Tyrese Gibson, Ludacris, Nathalie Emmanuel, Charlize Theron, John Cena, Finn Cole, Sung Kang, Anna Sawai"],
     trailerUrl: "", 
-    watchUrl: "",
-    downloadUrl: ""
+    servers: {
+      online: [
+        { 
+          name: "Google Drive", 
+          url: "https://drive.google.com/file/d/1BIOQTlFKWKH0yJtykJIIwQWkEfcLlK50/view?usp=sharing", 
+          quality: "1080p", 
+          audio: "Latino e Inglés",
+          type: "online"
+        },
+        { 
+          name: "Proximamente", 
+          url: "#", 
+          quality: "", 
+          audio: "",
+          type: ""
+        },
+        { 
+          name: "Proximamente", 
+          url: "#", 
+          quality: "", 
+          audio: "",
+          type: "online"
+        }
+      ],
+      download: [
+        { 
+          name: "Google Drive", 
+          url: "https://drive.google.com/file/d/1BIOQTlFKWKH0yJtykJIIwQWkEfcLlK50/view?usp=sharing", 
+          quality: "1080p", 
+          size: "2.82 GB",
+          audio: "Latino e Inglés",
+          type: "download"
+        },
+        { 
+          name: "Proximamente", 
+          url: "", 
+          quality: "", 
+          size: "",
+          audio: "",
+          type: ""
+        },
+        { 
+          name: "Proximamente", 
+          url: "", 
+          quality: "", 
+          size: "",
+          audio: "",
+          type: ""
+        }
+      ]
+    }
   },
 
 
@@ -1071,10 +1609,10 @@ function loadMovieDetails() {
   
   const movie = moviesData[movieId];
   
-  // Actualizar el título de la página
+
   document.title = `${movie.title} - CineCalidad`;
   
-  // Llenar los elementos con la información de la película
+ 
   document.getElementById('movie-poster').src = movie.poster;
   document.getElementById('movie-poster').alt = movie.title;
   document.getElementById('movie-title').textContent = movie.title;
@@ -1084,17 +1622,13 @@ function loadMovieDetails() {
   document.getElementById('movie-quality').textContent = movie.quality;
   document.getElementById('movie-director').textContent = movie.director;
   
-  // Crear las estrellas de rating
+
   createStarRating(movie.rating);
   
-  // Crear los géneros
   createGenreTags(movie.genres);
 
-  
-  // Crear el elenco
   createCastList(movie.cast);
   
-  // Configurar los enlaces de los botones
   setupMovieLinks(movie);
 }
 
@@ -1109,17 +1643,16 @@ function createStarRating(rating) {
   
   let starsHTML = '';
   
-  // Estrellas llenas
   for (let i = 0; i < fullStars; i++) {
     starsHTML += '<i class="fas fa-star star"></i>';
   }
   
-  // Media estrella
+
   if (hasHalfStar) {
     starsHTML += '<i class="fas fa-star-half-alt star"></i>';
   }
   
-  // Estrellas vacías
+
   for (let i = 0; i < emptyStars; i++) {
     starsHTML += '<i class="far fa-star star empty"></i>';
   }
@@ -1131,14 +1664,14 @@ function createStarRating(rating) {
 function createGenreTags(genres) {
   const genresContainer = document.getElementById('movie-genres');
   
-  // Manejar diferentes formatos de géneros
+ 
   let genreArray = [];
   
   if (Array.isArray(genres)) {
-    // Si ya es un array, usarlo directamente
+    
     genreArray = genres;
   } else if (typeof genres === 'string') {
-    // Si es string, separar por | o por comas
+    
     if (genres.includes('|')) {
       genreArray = genres.split('|').map(g => g.trim());
     } else if (genres.includes(',')) {
@@ -1150,19 +1683,18 @@ function createGenreTags(genres) {
     genreArray = ['Sin género especificado'];
   }
   
-  // Limpiar géneros vacíos o duplicados
+  
   genreArray = genreArray.filter((genre, index, self) => 
     genre && genre.trim() !== '' && self.indexOf(genre) === index
   );
   
-  // Crear enlaces separados por comas
+ 
   const genreLinks = genreArray.map(genre => {
     const genreClean = genre.trim();
     const category = getCategoryFromGenre(genreClean);
     return `<a class="genre-link" href="categorias.html?categoria=${category}">${genreClean}</a>`;
   });
-  
-  // Unir con comas
+
   genresContainer.innerHTML = genreLinks.join('');
 }
 
@@ -1198,10 +1730,10 @@ function createCastList(cast) {
   castContainer.innerHTML = castHTML;
 }
 
-// Variables globales
+
 let watchTrailerBtn, watchOnlineBtn, downloadBtn, trailerContainer, onlineContainer, downloadContainer, videoOverlay, closeOverlay;
 
-// Datos de servidores de descarga
+
 const downloadServers = [
   { name: "MEGA", url: "#", quality: "1080p", size: "2.5 GB" },
   { name: "Google Drive", url: "#", quality: "720p", size: "1.8 GB" },
@@ -1209,17 +1741,17 @@ const downloadServers = [
   { name: "Torrent", url: "#", quality: "4K", size: "4.1 GB" }
 ];
 
-// Función para inicializar elementos del DOM
+
 function initializeContainers() {
-  // Inicializar elementos
+
   watchTrailerBtn = document.getElementById('watch-trailer-btn');
   watchOnlineBtn = document.getElementById('watch-online-btn');
   downloadBtn = document.getElementById('download-btn');
   
-  // CORRECCIÓN: Inicializar downloadContainer correctamente
+
   downloadContainer = document.getElementById('download-container');
 
-  // Configurar event listeners
+ 
   if (watchTrailerBtn) {
     watchTrailerBtn.addEventListener('click', showTrailer);
   }
@@ -1233,7 +1765,7 @@ function initializeContainers() {
   }
 }
 
-// Función para mostrar trailer
+
 function showTrailer() {
   const currentMovie = getCurrentMovie();
   console.log('Trailer URL:', currentMovie?.trailerUrl);
@@ -1243,13 +1775,12 @@ function showTrailer() {
     return;
   }
 
-  // Ocultar otros contenedores
+
   hideAllContainers();
   
-  // Convertir URL a embed
+ 
   const embedUrl = convertToEmbedUrl(currentMovie.trailerUrl);
-  
-  // Cargar trailer en la sección principal (arriba)
+ 
   const mainTrailerPlayer = document.getElementById('main-trailer-player');
   if (mainTrailerPlayer) {
     mainTrailerPlayer.innerHTML = `
@@ -1262,18 +1793,16 @@ function showTrailer() {
     `;
   }
 
-   // Mostrar la sección del trailer (arriba)
   const trailerSection = document.getElementById('movie-trailer');
   if (trailerSection) {
     trailerSection.classList.remove('hidden');
-    
-    // Desplazar la página hacia el trailer
+ 
     trailerSection.scrollIntoView({ behavior: 'smooth' });
   }
 }
 
 
-// Función para mostrar ver online (con servidores)
+
 function showOnline() {
   const currentMovie = getCurrentMovie();
   
@@ -1282,10 +1811,9 @@ function showOnline() {
     return;
   }
 
-  // Ocultar otros contenedores
+
   hideAllContainers();
   
-  // Cargar servidores para ver online específicos de la película
   const serversList = document.querySelector('#online-container .servers-list');
   if (serversList) {
     serversList.innerHTML = currentMovie.servers.online.map(server => `
@@ -1302,14 +1830,13 @@ function showOnline() {
     `).join('');
   }
   
-  // Mostrar contenedor
+
   const onlineContainer = document.getElementById('online-container');
   if (onlineContainer) {
     onlineContainer.classList.remove('hidden');
   }
 }
 
-// Función para mostrar descargas
 function showDownloads() {
   const currentMovie = getCurrentMovie();
   
@@ -1318,10 +1845,10 @@ function showDownloads() {
     return;
   }
 
-  // Ocultar otros contenedores
+
   hideAllContainers();
   
-  // Cargar servidores de descarga específicos de la película
+
   const serversList = document.querySelector('#download-container .servers-list');
   if (serversList) {
     serversList.innerHTML = currentMovie.servers.download.map(server => `
@@ -1338,13 +1865,12 @@ function showDownloads() {
     `).join('');
   }
   
-  // Mostrar contenedor
   if (downloadContainer) {
     downloadContainer.classList.remove('hidden');
   }
 }
 
-// Función para ocultar todos los contenedores
+
 function hideAllContainers() {
   const trailerSection = document.getElementById('movie-trailer');
   const onlineContainer = document.getElementById('online-container');
@@ -1355,7 +1881,7 @@ function hideAllContainers() {
   if (downloadContainer) downloadContainer.classList.add('hidden');
 }
 
-// Función para expandir video
+
 function expandVideo(target) {
   const sourceIframe = document.querySelector(`#${target}-player iframe`);
   if (!sourceIframe) return;
@@ -1370,7 +1896,6 @@ function expandVideo(target) {
   }
 }
 
-// Función para convertir URL a embed
 function convertToEmbedUrl(url) {
   if (url.includes('youtube.com/watch?v=')) {
     const videoId = url.split('v=')[1].split('&')[0];
@@ -1382,19 +1907,17 @@ function convertToEmbedUrl(url) {
   return url;
 }
 
-// Función para obtener película actual
+
 function getCurrentMovie() {
   const urlParams = new URLSearchParams(window.location.search);
   const movieId = urlParams.get('id');
   return moviesData[movieId];
 }
 
-// Función para configurar enlaces de película (mantener por compatibilidad)
 function setupMovieLinks(movie) {
-  // Esta función puede usarse para configurar enlaces directos si es necesario
+
 }
 
-// Función para configurar botones de acción (mantener por compatibilidad)
 function setupActionButtons() {
-  // Los event listeners ya están configurados en initializeContainers()
+
 }

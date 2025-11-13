@@ -1,4 +1,4 @@
-/* peliculas */
+
 main {
   padding: 20px 16px;
   max-width: 1280px;
@@ -58,7 +58,7 @@ main {
   right: 10px;
 }
 
-/* Tarejeta de peliculas*/
+
 .movies-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
@@ -233,7 +233,7 @@ main {
   color: #FFD700;
 }
 
-/* Responsive */
+
 @media screen and (max-width: 992px) {
   .movies-grid {
     grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));

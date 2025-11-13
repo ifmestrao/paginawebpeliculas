@@ -1,15 +1,15 @@
-// Comments System JavaScript
+
 document.addEventListener('DOMContentLoaded', function() {
   initializeComments();
 });
 
-// Almacenamiento local de comentarios (en una aplicación real, esto sería una base de datos)
+
 let comments = JSON.parse(localStorage.getItem('movieComments')) || {};
 let currentMovieId = null;
 let userRating = 0;
 
 function initializeComments() {
-  // Obtener el ID de la película actual
+  
   const urlParams = new URLSearchParams(window.location.search);
   currentMovieId = urlParams.get('id');
   
@@ -42,7 +42,7 @@ function setupCommentForm() {
     
     addComment(userName, commentText, userRating);
     
-    // Limpiar formulario
+  
     commentForm.reset();
     resetStarRating();
     userRating = 0;
@@ -108,12 +108,12 @@ function addComment(userName, commentText, rating) {
     likes: 0
   };
   
-  comments[currentMovieId].unshift(newComment); // Agregar al inicio
+  comments[currentMovieId].unshift(newComment); 
   saveComments();
   loadComments();
   updateCommentsCount();
   
-  // Mostrar mensaje de éxito
+  
   showSuccessMessage('¡Comentario publicado exitosamente!');
 }
 
@@ -203,7 +203,7 @@ function escapeHtml(text) {
 }
 
 function showSuccessMessage(message) {
-  // Crear elemento de notificación
+
   const notification = document.createElement('div');
   notification.className = 'success-notification';
   notification.innerHTML = `
@@ -211,7 +211,7 @@ function showSuccessMessage(message) {
     <span>${message}</span>
   `;
   
-  // Agregar estilos
+ 
   notification.style.cssText = `
     position: fixed;
     top: 20px;
@@ -232,12 +232,12 @@ function showSuccessMessage(message) {
   
   document.body.appendChild(notification);
   
-  // Animar entrada
+
   setTimeout(() => {
     notification.style.transform = 'translateX(0)';
   }, 100);
   
-  // Remover después de 3 segundos
+  
   setTimeout(() => {
     notification.style.transform = 'translateX(100%)';
     setTimeout(() => {
@@ -246,7 +246,7 @@ function showSuccessMessage(message) {
   }, 3000);
 }
 
-// Función para limpiar comentarios (útil para desarrollo)
+
 function clearAllComments() {
   if (confirm('¿Estás seguro de que quieres eliminar todos los comentarios?')) {
     localStorage.removeItem('movieComments');
@@ -255,39 +255,3 @@ function clearAllComments() {
     updateCommentsCount();
   }
 }
-
-// Agregar algunos comentarios de ejemplo para demostración
-/*function addSampleComments() {
-  const sampleComments = [
-  
-    
-  ];
-  
-  // Solo agregar comentarios de ejemplo si no hay comentarios para esta película
-  if (!comments[currentMovieId] || comments[currentMovieId].length === 0) {
-    comments[currentMovieId] = [];
-    
-    sampleComments.forEach((comment, index) => {
-      const sampleComment = {
-        id: Date.now() + index,
-        userName: comment.userName,
-        text: comment.text,
-        rating: comment.rating,
-        date: new Date(Date.now() - (index * 24 * 60 * 60 * 1000)).toISOString(), // Fechas diferentes
-        likes: Math.floor(Math.random() * 10)
-      };
-      
-      comments[currentMovieId].push(sampleComment);
-    });
-    
-    saveComments();
-    loadComments();
-    updateCommentsCount();
-  }
-}*//*
-// Llamar a la función de comentarios de ejemplo después de un breve delay
-setTimeout(() => {
-  if (currentMovieId) {
-    addSampleComments();
-  }
-}, 1000);*/

@@ -1,4 +1,4 @@
-// Datos de películas
+
 const movies = [
   {
     id: 24,
@@ -202,12 +202,12 @@ const movies = [
 
 ];
 
-// paginación
+
 let currentPage = 1;
 const moviesPerPage = 12;
 const totalPages = Math.ceil(movies.length / moviesPerPage);
 
-// Cargar películas 
+
 document.addEventListener('DOMContentLoaded', function() {
   loadMovies();
   setupPagination();
@@ -228,8 +228,7 @@ function loadMovies() {
 }
 
 function createMovieCard(movie) {
-  // CAMBIÉ: Quité el <a href> y lo reemplacé con un div normal
-  // para manejar el click mediante JavaScript
+
   return `
     <div class="movie-card" data-id="${movie.id}">
       <div class="movie-poster">
@@ -263,8 +262,7 @@ function setupMovieClickHandlers() {
   movieCards.forEach(card => {
     card.addEventListener('click', function() {
       const movieId = this.dataset.id;
-      // CAMBIÉ: Redirigir a la página de detalles con el ID de la película
-      // Esto funciona tanto en PC como en móviles
+
       window.location.href = `pelidetalle.html?id=${movieId}`;
     });
   });
@@ -283,9 +281,6 @@ function updatePaginationUI() {
     totalPagesSpan.textContent = totalPages;
   }
 }
-
-//nueva
-
 
 function setupPagination() {
   const prevBtn = document.querySelector('.pagination-btn.prev');
@@ -322,7 +317,7 @@ function updatePaginationUI() {
   }
 }
 
-// Inicio funcion
+
 document.addEventListener('DOMContentLoaded', function() {
   initializeApp();
 });
@@ -330,9 +325,6 @@ document.addEventListener('DOMContentLoaded', function() {
 function initializeApp() {
   setupSearch();
 }
-
-// Búsqueda 
-// ========== FUNCIONALIDAD DE BÚSQUEDA ==========
 
 function initializeApp() {
   setupSearch();
@@ -378,19 +370,13 @@ function displaySearchResults(results, query) {
 }
 
 
-
-// Menú móvil y submenú
-
-// Elementos del menú móvil
 const menuIcon = document.querySelector('.mobile-menu-icon');
 const mobileNav = document.querySelector('.mobile-nav');
 const dropdownToggle = document.querySelector('.dropdown-toggle');
 const dropdownList = document.querySelector('.dropdown-list-mobile');
 const mobileNavOverlay = document.querySelector('.mobile-nav-overlay');
 
-// ========== FUNCIONALIDAD DEL MENÚ ==========
 
-// Alternar menú móvil completo
 menuIcon.addEventListener('click', (e) => {
   e.stopPropagation();
   mobileNav.classList.toggle('active');
@@ -401,14 +387,14 @@ menuIcon.addEventListener('click', (e) => {
   }
 });
 
-// Alternar submenú "Categorías" en móvil
+
 dropdownToggle.addEventListener('click', function(e) {
   e.preventDefault();
   e.stopPropagation();
   dropdownList.classList.toggle('show');
 });
 
-// Cerrar menú móvil al hacer click fuera
+
 document.addEventListener('click', (e) => {
   if (mobileNav.classList.contains('active') && 
       !mobileNav.contains(e.target) && 
@@ -419,25 +405,25 @@ document.addEventListener('click', (e) => {
   }
 });
 
-// Cerrar con el overlay
+
 mobileNavOverlay.addEventListener('click', () => {
   mobileNav.classList.remove('active');
   mobileNavOverlay.classList.remove('active');
   dropdownList.classList.remove('show');
 });
 
-// Manejar la selección activa en ambos menús
+
 function setActiveLink(clickedLink) {
-  // Remover clase active de todos los enlaces del mismo nivel
+  
   const allLinks = document.querySelectorAll('.desktop-nav a, .mobile-nav a');
   allLinks.forEach(link => {
     link.classList.remove('active');
   });
   
-  // Agregar clase active al enlace clickeado
+ 
   clickedLink.classList.add('active');
   
-  // Cerrar menú móvil después de seleccionar (solo en móvil)
+  
   if (window.innerWidth <= 992) {
     mobileNav.classList.remove('active');
     mobileNavOverlay.classList.remove('active');
@@ -445,9 +431,9 @@ function setActiveLink(clickedLink) {
   }
 }
 
-// Configurar event listeners para navegación
+
 function setupNavigation() {
-  // Enlaces del menú desktop
+  
   const desktopLinks = document.querySelectorAll('.desktop-nav a');
   desktopLinks.forEach(link => {
     link.addEventListener('click', function(e) {
@@ -458,7 +444,7 @@ function setupNavigation() {
     });
   });
   
-  // Enlaces del menú móvil
+ 
   const mobileLinks = document.querySelectorAll('.mobile-nav a');
   mobileLinks.forEach(link => {
     link.addEventListener('click', function(e) {
@@ -468,7 +454,7 @@ function setupNavigation() {
     });
   });
   
-  // Enlaces de categorías del dropdown desktop
+  
   const desktopCategoryLinks = document.querySelectorAll('.dropdown-content a');
   desktopCategoryLinks.forEach(link => {
     link.addEventListener('click', function(e) {
@@ -476,7 +462,7 @@ function setupNavigation() {
     });
   });
   
-  // Enlaces de categorías del dropdown móvil
+  
   const mobileCategoryLinks = document.querySelectorAll('.dropdown-list-mobile a');
   mobileCategoryLinks.forEach(link => {
     link.addEventListener('click', function(e) {
@@ -485,29 +471,76 @@ function setupNavigation() {
   });
 }
 
-// Inicializar navegación cuando el DOM esté listo
+
 document.addEventListener('DOMContentLoaded', function() {
   setupNavigation();
 });
 
-/*
-const menuIcon = document.querySelector('.mobile-menu-icon');
-const mobileNav = document.querySelector('.mobile-nav');
-const dropdownToggle = document.querySelector('.dropdown-toggle');
-const dropdownList = document.querySelector('.dropdown-list-mobile');
 
-// Alternar menú móvil completo
-menuIcon.addEventListener('click', () => {
-  mobileNav.classList.toggle('active');
 
-  // Al cerrar el menú completo, ocultar también el submenú
-  if (!mobileNav.classList.contains('active')) {
-    dropdownList.classList.remove('show');
-  }
-});
 
-// Alternar submenú "Categorías"
-dropdownToggle.addEventListener('click', function(e) {
-  e.preventDefault();
-  dropdownList.classList.toggle('show');
-});*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

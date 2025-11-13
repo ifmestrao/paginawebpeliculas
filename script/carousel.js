@@ -1,29 +1,29 @@
 document.addEventListener('DOMContentLoaded', function() {
   const featuredMovies = [
-    {
+     {
       id: 1,
+      title: "Los 4 Fantásticos: Primeros pasos (2025)",
+      image: "imagenes/carusel4fantasticos.jpg"
+    },
+    {
+      id: 2,
+      title: "El conjuro 4: Últimos ritos (2025)",
+      image: "imagenes/caruselconjuro4.jpg"
+    },
+    {
+      id: 3,
+      title: "Jurassic World: El Renacer (2025)",
+      image: "imagenes/caruseljurasicrenace.jpg"
+    },
+    {
+      id: 4,
       title: "Capitán América: Un nuevo mundo (2025)",
       image: "imagenes/capitan.jpg"
     },
     {
-      id: 1,
+      id: 5,
       title: "Drácula: El último viaje del Demeter (2023)",
       image: "imagenes/dracula.jpg"
-    },
-    {
-      id: 3,
-      title: "Oppenheimer (2023)",
-      image: "imagenes/Oppenheimer2.webp"
-    },
-    {
-      id: 4,
-      title: "Estado eléctrico (2025)",
-      image: "imagenes/estado.jpg"
-    },
-    {
-      id: 5,
-      title: "Indiana Jones y el llamado del destino (2023)",
-      image: "imagenes/indiana.jpeg"
     }
   ];
 
@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
   let currentSlide = 0;
   let autoPlayInterval;
 
-  // Crear slides
+ 
   featuredMovies.forEach((movie, index) => {
     const slide = document.createElement('div');
     slide.className = `carousel-slide ${index === 0 ? 'active' : ''}`;
@@ -44,7 +44,6 @@ document.addEventListener('DOMContentLoaded', function() {
     carouselContainer.appendChild(slide);
   });
 
-  // Controles
   document.querySelector('.carousel-arrow.prev').addEventListener('click', () => changeSlide(-1));
   document.querySelector('.carousel-arrow.next').addEventListener('click', () => changeSlide(1));
 
@@ -56,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
     slides[currentSlide].classList.add('active');
   }
 
-  // Auto-rotación
+ 
   function startAutoPlay() {
     autoPlayInterval = setInterval(() => changeSlide(1), 4000);
   }

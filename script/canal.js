@@ -1,4 +1,4 @@
-// Datos de noticias y próximos estrenos
+
 const newsData = [
   {
     id: 1,
@@ -115,10 +115,10 @@ function loadUpcomingMovies() {
 }
 
 function setupChannelLinks() {
-  // Aquí puedes agregar funcionalidad adicional para los enlaces de los canales
+  
   console.log('Enlaces de canales configurados');
   
-  // Ejemplo: Tracking de clicks en los botones
+
   const joinButtons = document.querySelectorAll('.channel-join-btn');
   joinButtons.forEach(button => {
     button.addEventListener('click', function(e) {
@@ -126,14 +126,14 @@ function setupChannelLinks() {
                      this.querySelector('i').className.includes('whatsapp') ? 'WhatsApp' : 'Instagram';
       
       console.log(`Usuario intentando unirse a ${channel}`);
-      // Aquí puedes agregar analytics o tracking
+   
     });
   });
 }
 
-// Función para actualizar estadísticas en tiempo real
+
 function updateLiveStats() {
-  // Simular estadísticas en tiempo real
+
   const stats = document.querySelectorAll('.stat span');
   
   setInterval(() => {
@@ -144,13 +144,12 @@ function updateLiveStats() {
         stat.textContent = stat.textContent.replace(/[0-9]+/, `+${newCount}K`);
       }
     });
-  }, 30000); // Actualizar cada 30 segundos
+  }, 30000);
 }
 
-// Iniciar actualización de estadísticas
+
 updateLiveStats();
 
-// Efectos de animación al hacer scroll
 function setupScrollAnimations() {
   const observerOptions = {
     threshold: 0.1,
@@ -166,7 +165,6 @@ function setupScrollAnimations() {
     });
   }, observerOptions);
 
-  // Observar tarjetas de canales
   const channelCards = document.querySelectorAll('.channel-card');
   channelCards.forEach(card => {
     card.style.opacity = '0';
@@ -175,7 +173,7 @@ function setupScrollAnimations() {
     observer.observe(card);
   });
 
-  // Observar tarjetas de noticias
+
   const newsCards = document.querySelectorAll('.news-card');
   newsCards.forEach(card => {
     card.style.opacity = '0';
@@ -185,5 +183,5 @@ function setupScrollAnimations() {
   });
 }
 
-// Iniciar animaciones al cargar la página
+
 document.addEventListener('DOMContentLoaded', setupScrollAnimations);

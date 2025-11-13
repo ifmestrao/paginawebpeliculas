@@ -1,4 +1,3 @@
-// Datos extendidos de películas con géneros, directores y elenco
 const moviesDataExtended = {
   24: {
     id: 24,
@@ -266,7 +265,7 @@ const moviesDataExtended = {
   }
 };
 
-// Mapeo de categorías a géneros
+
 const categoryMap = {
   'accion': ['Acción'],
   'comedia': ['Comedia'],
@@ -277,10 +276,10 @@ const categoryMap = {
   'romance': ['Romance'],
   'terror': ['Terror'],
   'ciencia-ficcion': ['Ciencia ficción'],
-  'destacado': ['Acción', 'Aventura', 'Ciencia ficción'] // Películas destacadas
+  'destacado': ['Acción', 'Aventura', 'Ciencia ficción'] 
 };
 
-// Descripciones de categorías
+// categorías
 const categoryDescriptions = {
   /*
   'accion': 'Películas llenas de adrenalina, peleas espectaculares y emociones fuertes.',
@@ -305,7 +304,7 @@ function loadCategoryMovies() {
   const urlParams = new URLSearchParams(window.location.search);
   const categoria = urlParams.get('categoria') || 'destacado';
   
-  // Actualizar título y descripción
+ 
   const categoryTitle = document.getElementById('category-title');
   const categoryDescription = document.getElementById('category-description');
   
@@ -313,14 +312,14 @@ function loadCategoryMovies() {
   categoryTitle.textContent = `Películas de ${categoryName}`;
   categoryDescription.textContent = categoryDescriptions[categoria] || '';
   
-  // Filtrar películas por categoría
+ 
   const filteredMovies = filterMoviesByCategory(categoria);
   
-  // Mostrar películas
+ 
   displayCategoryMovies(filteredMovies);
 }
 
-// Variables de paginación para categorías
+
 let currentCategoryPage = 1;
 const moviesPerCategoryPage = 12;
 let currentCategoryMovies = [];
@@ -335,7 +334,7 @@ function loadCategoryMovies() {
   const urlParams = new URLSearchParams(window.location.search);
   const categoria = urlParams.get('categoria') || 'destacado';
   
-  // Actualizar título y descripción
+
   const categoryTitle = document.getElementById('category-title');
   const categoryDescription = document.getElementById('category-description');
   
@@ -343,10 +342,10 @@ function loadCategoryMovies() {
   categoryTitle.textContent = `Películas de ${categoryName}`;
   categoryDescription.textContent = categoryDescriptions[categoria] || '';
   
-  // Filtrar películas por categoría
+
   currentCategoryMovies = filterMoviesByCategory(categoria);
   
-  // Mostrar películas con paginación
+ 
   displayCategoryMovies(currentCategoryMovies);
   updatePaginationUI();
 }
@@ -365,7 +364,7 @@ function displayCategoryMovies(movies) {
         <p>Próximamente agregaremos más contenido.</p>
       </div>
     `;
-    // Ocultar paginación si no hay resultados
+ 
     document.querySelector('.pagination').style.display = 'none';
     return;
   }
@@ -373,7 +372,7 @@ function displayCategoryMovies(movies) {
   moviesGrid.innerHTML = currentMovies.map(movie => createMovieCard(movie)).join('');
   setupMovieClickHandlers();
   
-  // Mostrar paginación solo si es necesaria
+ 
   const pagination = document.querySelector('.pagination');
   if (movies.length > moviesPerCategoryPage) {
     pagination.style.display = 'flex';
@@ -419,8 +418,7 @@ function updatePaginationUI() {
     nextBtn.disabled = currentCategoryPage === totalPages;
     currentPageSpan.textContent = currentCategoryPage;
     totalPagesSpan.textContent = totalPages;
-    
-    // Ocultar paginación si solo hay una página
+  
     const pagination = document.querySelector('.pagination');
     if (totalPages <= 1) {
       pagination.style.display = 'none';
@@ -514,7 +512,7 @@ function setupMovieClickHandlers() {
   });
 }
 
-// Configurar búsqueda
+
 function setupSearch() {
   const searchForm = document.getElementById('search-form');
   const searchInput = document.getElementById('search-input');
@@ -559,7 +557,6 @@ function displaySearchResults(results, query) {
   setupMovieClickHandlers();
 }
 
-// Inicializar cuando el DOM esté listo
 document.addEventListener('DOMContentLoaded', function() {
   setupSearch();
 });

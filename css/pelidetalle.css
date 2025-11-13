@@ -1,11 +1,11 @@
-/* Movie Details Page Styles */
+
 .movie-details-main {
   padding: 40px 20px;
   max-width: 1200px;
   margin: 0 auto;
   min-height: calc(100vh - 140px);
-  line-height: 1; /* reduce interlineado */
-  margin-bottom: 10px; /* espacio reducido entre párrafos */
+  line-height: 1; 
+  margin-bottom: 10px; 
 }
 
 .movie-details-container {
@@ -219,7 +219,6 @@
   transform: translateY(-2px);
 }
 
-/* Comments Section Styles */
 .comments-section {
   background-color: var(--background-light);
   padding: 60px 0;
@@ -432,7 +431,6 @@
   font-size: 1.2rem;
 }
 
-/* Responsive Design */
 @media screen and (max-width: 992px) {
   .movie-details-container {
     grid-template-columns: 300px 1fr;
@@ -547,7 +545,7 @@
   }
 }
 
-/* Estilos para los enlaces en los detalles */
+
 .genre-tag {
   background-color: var(--primary-color);
   color: #B0B0B0;
@@ -567,7 +565,7 @@
   transform: translateY(-2px);
 }
 
-/* Estilos para la página de categorías */
+
 .category-description {
   color: #B0B0B0;
   font-size: 1.1rem;
@@ -601,7 +599,7 @@
   font-size: 1.1rem;
 }
 
-/* Estilos para los enlaces de género separados por comas */
+
 .metadata-value.genres {
   display: inline;
   line-height: 1.6;
@@ -632,7 +630,7 @@
   content: "";
 }
 
-/* Sección del Trailer en la parte superior */
+
 .movie-trailer-section {
   margin: 20px 0;
   padding: 0;
@@ -653,7 +651,7 @@
   position: relative;
   width: 100%;
   height: 0;
-  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  padding-bottom: 56.25%; 
   background: #000;
   border-radius: 10px;
   overflow: hidden;
@@ -668,7 +666,7 @@
   border: none;
 }
 
-/* Botones de acción - CENTRADOS */
+
 .movie-actions {
   display: flex;
   justify-content: center;
@@ -723,7 +721,7 @@
   transform: translateY(-2px);
 }
 
-/* Contenedores de contenido */
+
 .content-container {
   margin: 20px 0;
   padding: 20px;
@@ -750,7 +748,7 @@
   color: #00bfa5;
 }
 
-/* Lista de servidores */
+
 .servers-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -804,7 +802,7 @@
   margin: 5px 0;
 }
 
-/* Enlaces para descargar */
+
 .download-link {
   background: #3742fa;
 }
@@ -813,7 +811,7 @@
   background: #2f36f0;
 }
 
-/* Responsive para móviles */
+
 @media screen and (max-width: 768px) {
   .movie-actions {
     flex-direction: column;

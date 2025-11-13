@@ -1,4 +1,4 @@
-/* Footer*/
+
 footer {
   background-color: #1E1E1E; 
   padding-top: 60px;
@@ -72,7 +72,6 @@ footer {
 }
 
 
-/* Responsive Footer */
 @media screen and (max-width: 768px) {
   .footer-container {
     grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
